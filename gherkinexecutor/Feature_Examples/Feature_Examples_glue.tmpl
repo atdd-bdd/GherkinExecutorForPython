@@ -1,0 +1,78 @@
+package gherkinexecutor.Feature_Examples;
+import java.util.*;
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+
+class Feature_Examples_glue {
+    final String DNCString = "?DNC?";
+
+
+    void Calculation_Convert_F_to_C(List<TemperatureCalculation> values ) {
+        System.out.println("---  " + "Calculation_Convert_F_to_C");
+        for (TemperatureCalculation value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              TemperatureCalculationInternal i = value.toTemperatureCalculationInternal();
+              }
+        fail("Must implement");
+    }
+
+    void Rule_ID_must_have_exactly_5_letters_and_begin_with_Q(List<ValueValid> values ) {
+        System.out.println("---  " + "Rule_ID_must_have_exactly_5_letters_and_begin_with_Q");
+        for (ValueValid value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              ValueValidInternal i = value.toValueValidInternal();
+              }
+        fail("Must implement");
+    }
+
+    void Given_list_of_numbers(List<LabelValue> values ) {
+        System.out.println("---  " + "Given_list_of_numbers");
+        for (LabelValue value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              LabelValueInternal i = value.toLabelValueInternal();
+              }
+        fail("Must implement");
+    }
+
+    void When_filtered_by_ID_with_value(List<List<String>> values ) {
+        System.out.println("---  " + "When_filtered_by_ID_with_value");
+        for (List<String> value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              }
+        fail("Must implement");
+    }
+
+    void Then_sum_is(List<List<String>> values ) {
+        System.out.println("---  " + "Then_sum_is");
+        for (List<String> value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              }
+        fail("Must implement");
+    }
+
+    void When_filtered_by(List<FilterValue> values ) {
+        System.out.println("---  " + "When_filtered_by");
+        for (FilterValue value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              FilterValueInternal i = value.toFilterValueInternal();
+              }
+        fail("Must implement");
+    }
+
+    void Then_result(List<ResultValue> values ) {
+        System.out.println("---  " + "Then_result");
+        for (ResultValue value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              ResultValueInternal i = value.toResultValueInternal();
+              }
+        fail("Must implement");
+    }
+
+    }
