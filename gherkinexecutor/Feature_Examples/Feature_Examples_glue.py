@@ -2,128 +2,19 @@
 import unittest
 from typing import List
 
-class TemperatureCalculation:
-    def __init__(self, f, c, notes):
-        self.f = f
-        self.c = c
-        self.notes = notes
+from gherkinexecutor.Feature_Examples.TemperatureCalculation import TemperatureCalculation
+from gherkinexecutor.Feature_Examples.FilterValue import FilterValue
+from gherkinexecutor.Feature_Examples.ResultValue import ResultValue
+from gherkinexecutor.Feature_Examples.LabelValue import LabelValue
+from gherkinexecutor.Feature_Examples.ValueValid import ValueValid
+from gherkinexecutor.Feature_Examples.TemperatureCalculations import TemperatureCalculations
+from gherkinexecutor.Feature_Examples.TemperatureCalculationInternal import TemperatureCalculationInternal
+from gherkinexecutor.Feature_Examples.ID import ID
+from gherkinexecutor.Feature_Examples.SolutionForListOfNumber import SolutionForListOfNumber
+from gherkinexecutor.Feature_Examples.LabelValueInternal import LabelValueInternal
+from gherkinexecutor.Feature_Examples.FilterValueInternal import FilterValueInternal
+from gherkinexecutor.Feature_Examples.ResultValueInternal import ResultValueInternal
 
-    def to_temperature_calculation_internal(self):
-        return TemperatureCalculationInternal(self.f, self.c, self.notes)
-
-    class Builder:
-        def __init__(self):
-            self.f = None
-            self.c = None
-            self.notes = None
-
-        def f(self, f):
-            self.f = f
-            return self
-
-        def c(self, c):
-            self.c = c
-            return self
-
-        def notes(self, notes):
-            self.notes = notes
-            return self
-
-        def build(self):
-            return TemperatureCalculation(self.f, self.c, self.notes)
-
-class ValueValid:
-    def __init__(self, value, valid, notes):
-        self.value = value
-        self.valid = valid
-        self.notes = notes
-
-    class Builder:
-        def __init__(self):
-            self.value = None
-            self.valid = None
-            self.notes = None
-
-        def value(self, value):
-            self.value = value
-            return self
-
-        def valid(self, valid):
-            self.valid = valid
-            return self
-
-        def notes(self, notes):
-            self.notes = notes
-            return self
-
-        def build(self):
-            return ValueValid(self.value, self.valid, self.notes)
-
-class LabelValue:
-    def __init__(self, iD, value):
-        self.iD = iD
-        self.value = value
-
-    def to_label_value_internal(self):
-        return LabelValueInternal(self.iD, self.value)
-
-    class Builder:
-        def __init__(self):
-            self.iD = None
-            self.value = None
-
-        def iD(self, iD):
-            self.iD = iD
-            return self
-
-        def value(self, value):
-            self.value = value
-            return self
-
-        def build(self):
-            return LabelValue(self.iD, self.value)
-
-class FilterValue:
-    def __init__(self, name, value):
-        self.name = name
-        self.value = value
-
-    def to_filter_value_internal(self):
-        return FilterValueInternal(self.name, self.value)
-
-    class Builder:
-        def __init__(self):
-            self.name = None
-            self.value = None
-
-        def name(self, name):
-            self.name = name
-            return self
-
-        def value(self, value):
-            self.value = value
-            return self
-
-        def build(self):
-            return FilterValue(self.name, self.value)
-
-class ResultValue:
-    def __init__(self, sum):
-        self.sum = sum
-
-    def to_result_value_internal(self):
-        return ResultValueInternal(self.sum)
-
-    class Builder:
-        def __init__(self):
-            self.sum = None
-
-        def sum(self, sum):
-            self.sum = sum
-            return self
-
-        def build(self):
-            return ResultValue(self.sum)
 
 class FeatureExamplesGlue:
     def __init__(self):
@@ -148,7 +39,8 @@ class FeatureExamplesGlue:
                 assert i.c == c, i.notes
                 print(i)
             except Exception as e:
-                print(f"Argument Error {value} {TemperatureCalculationInternal.to_data_type_string()}")
+                print (e)
+                print(f"Argument Error  1 {value} {TemperatureCalculationInternal.to_data_type_string()}")
 
     def Rule_ID_must_have_exactly_5_letters_and_begin_with_Q(self, values: List[ValueValid]):
         print("---  Rule_ID_must_have_exactly_5_letters_and_begin_with_Q")
@@ -176,7 +68,8 @@ class FeatureExamplesGlue:
                 print(i)
                 self.solution.add(i)
             except Exception as e:
-                print(f"Argument Error {value} {LabelValueInternal.to_data_type_string()}")
+                print(e)
+                print(f"Argument Error 2 {value} {LabelValueInternal.to_data_type_string()}")
 
     def When_filtered_by_ID_with_value(self, values: List[List[str]]):
         print("---  When_filtered_by_ID_with_value")
@@ -204,7 +97,8 @@ class FeatureExamplesGlue:
                 print(f"Filter is {value.value}")
                 self.solution.set_filter_value(ID(value.value))
             except Exception as e:
-                print(f"Argument Error {value} {FilterValueInternal.to_data_type_string()}")
+                print(e)
+                print(f"Argument Error 3 {value} {FilterValueInternal.to_data_type_string()}")
 
     def Then_result(self, values: List[ResultValue]):
         print("---  Then_result")
@@ -215,4 +109,5 @@ class FeatureExamplesGlue:
                 actual = self.solution.sum()
                 assert i.sum == actual
             except Exception as e:
-                print(f"Argument Error {value} {ResultValueInternal.to_data_type_string()}")
+                print(e)
+                print(f"Argument Error 4 {value} {ResultValueInternal.to_data_type_string()}")

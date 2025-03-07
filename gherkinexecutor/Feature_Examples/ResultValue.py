@@ -1,4 +1,4 @@
-
+from gherkinexecutor.Feature_Examples.ResultValueInternal import ResultValueInternal
 import json
 
 class ResultValue:
@@ -40,7 +40,7 @@ class ResultValue:
         def __init__(self):
             self.sum = ""
 
-        def sum(self, sum):
+        def setsum(self, sum):
             self.sum = sum
             return self
 

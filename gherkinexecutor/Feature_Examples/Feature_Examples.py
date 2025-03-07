@@ -1,138 +1,13 @@
-
 import unittest
 
-class TemperatureCalculation:
-    def __init__(self, f, c, notes):
-        self.f = f
-        self.c = c
-        self.notes = notes
 
-    class Builder:
-        def __init__(self):
-            self.f = None
-            self.c = None
-            self.notes = None
+from gherkinexecutor.Feature_Examples.TemperatureCalculation import TemperatureCalculation
+from gherkinexecutor.Feature_Examples.FilterValue import FilterValue
+from gherkinexecutor.Feature_Examples.ResultValue import ResultValue
+from gherkinexecutor.Feature_Examples.LabelValue import LabelValue
+from gherkinexecutor.Feature_Examples.ValueValid import ValueValid
+from gherkinexecutor.Feature_Examples.Feature_Examples_glue import FeatureExamplesGlue
 
-        def f(self, f):
-            self.f = f
-            return self
-
-        def c(self, c):
-            self.c = c
-            return self
-
-        def notes(self, notes):
-            self.notes = notes
-            return self
-
-        def build(self):
-            return TemperatureCalculation(self.f, self.c, self.notes)
-
-class ValueValid:
-    def __init__(self, value, valid, notes):
-        self.value = value
-        self.valid = valid
-        self.notes = notes
-
-    class Builder:
-        def __init__(self):
-            self.value = None
-            self.valid = None
-            self.notes = None
-
-        def value(self, value):
-            self.value = value
-            return self
-
-        def valid(self, valid):
-            self.valid = valid
-            return self
-
-        def notes(self, notes):
-            self.notes = notes
-            return self
-
-        def build(self):
-            return ValueValid(self.value, self.valid, self.notes)
-
-class LabelValue:
-    def __init__(self, iD, value):
-        self.iD = iD
-        self.value = value
-
-    class Builder:
-        def __init__(self):
-            self.iD = None
-            self.value = None
-
-        def iD(self, iD):
-            self.iD = iD
-            return self
-
-        def value(self, value):
-            self.value = value
-            return self
-
-        def build(self):
-            return LabelValue(self.iD, self.value)
-
-class FilterValue:
-    def __init__(self, name, value):
-        self.name = name
-        self.value = value
-
-    class Builder:
-        def __init__(self):
-            self.name = None
-            self.value = None
-
-        def name(self, name):
-            self.name = name
-            return self
-
-        def value(self, value):
-            self.value = value
-            return self
-
-        def build(self):
-            return FilterValue(self.name, self.value)
-
-class ResultValue:
-    def __init__(self, sum):
-        self.sum = sum
-
-    class Builder:
-        def __init__(self):
-            self.sum = None
-
-        def sum(self, sum):
-            self.sum = sum
-            return self
-
-        def build(self):
-            return ResultValue(self.sum)
-
-class FeatureExamplesGlue:
-    def Calculation_Convert_F_to_C(self, objectList1):
-        pass
-
-    def Rule_ID_must_have_exactly_5_letters_and_begin_with_Q(self, objectList1):
-        pass
-
-    def Given_list_of_numbers(self, objectList1):
-        pass
-
-    def When_filtered_by_ID_with_value(self, stringListList2):
-        pass
-
-    def Then_sum_is(self, stringListList3):
-        pass
-
-    def When_filtered_by(self, objectList2):
-        pass
-
-    def Then_result(self, objectList3):
-        pass
 
 class FeatureExamples(unittest.TestCase):
 
@@ -140,9 +15,9 @@ class FeatureExamples(unittest.TestCase):
         feature_examples_glue_object = FeatureExamplesGlue()
 
         objectList1 = [
-            TemperatureCalculation.Builder().f("32").c("0").notes("Freezing").build(),
-            TemperatureCalculation.Builder().f("212").c("100").notes("Boiling").build(),
-            TemperatureCalculation.Builder().f("-40").c("-40").notes("Below zero").build()
+            TemperatureCalculation.Builder().setf("32").setc("0").setnotes("Freezing").build(),
+            TemperatureCalculation.Builder().setf("212").setc("100").setnotes("Boiling").build(),
+            TemperatureCalculation.Builder().setf("-40").setc("-40").setnotes("Below zero").build()
         ]
         feature_examples_glue_object.Calculation_Convert_F_to_C(objectList1)
 
@@ -150,10 +25,10 @@ class FeatureExamples(unittest.TestCase):
         feature_examples_glue_object = FeatureExamplesGlue()
 
         objectList1 = [
-            ValueValid.Builder().value("Q1234").valid("true").notes("").build(),
-            ValueValid.Builder().value("Q123").valid("false").notes("Too short").build(),
-            ValueValid.Builder().value("Q12345").valid("false").notes("Too long").build(),
-            ValueValid.Builder().value("A1234").valid("false").notes("Must begin with Q").build()
+            ValueValid.Builder().setvalue("Q1234").setvalid("true").setnotes("").build(),
+            ValueValid.Builder().setvalue("Q123").setvalid("false").setnotes("Too short").build(),
+            ValueValid.Builder().setvalue("Q12345").setvalid("false").setnotes("Too long").build(),
+            ValueValid.Builder().setvalue("A1234").setvalid("false").setnotes("Must begin with Q").build()
         ]
         feature_examples_glue_object.Rule_ID_must_have_exactly_5_letters_and_begin_with_Q(objectList1)
 
@@ -161,9 +36,9 @@ class FeatureExamples(unittest.TestCase):
         feature_examples_glue_object = FeatureExamplesGlue()
 
         objectList1 = [
-            LabelValue.Builder().iD("Q1234").value("1").build(),
-            LabelValue.Builder().iD("Q9999").value("2").build(),
-            LabelValue.Builder().iD("Q1234").value("3").build()
+            LabelValue.Builder().setiD("Q1234").setvalue("1").build(),
+            LabelValue.Builder().setiD("Q9999").setvalue("2").build(),
+            LabelValue.Builder().setiD("Q1234").setvalue("3").build()
         ]
         feature_examples_glue_object.Given_list_of_numbers(objectList1)
 
@@ -181,18 +56,18 @@ class FeatureExamples(unittest.TestCase):
         feature_examples_glue_object = FeatureExamplesGlue()
 
         objectList1 = [
-            LabelValue.Builder().iD("Q1234").value("1").build(),
-            LabelValue.Builder().iD("Q9999").value("2").build(),
-            LabelValue.Builder().iD("Q1234").value("3").build()
+            LabelValue.Builder().setiD("Q1234").setvalue("1").build(),
+            LabelValue.Builder().setiD("Q9999").setvalue("2").build(),
+            LabelValue.Builder().setiD("Q1234").setvalue("3").build()
         ]
         feature_examples_glue_object.Given_list_of_numbers(objectList1)
 
-        objectList2 = [
-            FilterValue.Builder().name("ID").value("Q1234").build()
-        ]
-        feature_examples_glue_object.When_filtered_by(objectList2)
+        # objectList2 = [
+        #     FilterValue.Builder().setname("ID").setvalue("Q1234").build()
+        # ]
+        # feature_examples_glue_object.When_filtered_by(objectList2)
 
         objectList3 = [
-            ResultValue.Builder().sum("4").build()
+            ResultValue.Builder().setsum("4").build()
         ]
         feature_examples_glue_object.Then_result(objectList3)

@@ -1,6 +1,10 @@
 
 import json
 
+from gherkinexecutor.Feature_Examples.LabelValueInternal import LabelValueInternal
+from gherkinexecutor.Feature_Examples.ID import ID
+
+
 class LabelValue:
     def __init__(self, iD="", value="0"):
         self.iD = iD
@@ -45,11 +49,11 @@ class LabelValue:
             self.iD = ""
             self.value = "0"
 
-        def iD(self, iD):
+        def setiD(self, iD):
             self.iD = iD
             return self
 
-        def value(self, value):
+        def setvalue(self, value):
             self.value = value
             return self
 

@@ -1,6 +1,10 @@
 
 import json
 
+from gherkinexecutor.Feature_Examples.FilterValueInternal import FilterValueInternal
+from gherkinexecutor.Feature_Examples.ID import ID
+
+
 class FilterValue:
     def __init__(self, name="", value="Q0000"):
         self.name = name
@@ -18,7 +22,7 @@ class FilterValue:
         return True
 
     def __str__(self):
-        return f"FilterValue {{name = {self.name} value = {self.value} }}\n"
+        return f"FilterValue {{name = {self.name} value = {self.value}}}\n"
 
     def to_json(self):
         return json.dumps({"name": self.name, "value": self.value})
@@ -45,11 +49,11 @@ class FilterValue:
             self.name = ""
             self.value = "Q0000"
 
-        def name(self, name):
+        def setname(self, name):
             self.name = name
             return self
 
-        def value(self, value):
+        def setvalue(self, value):
             self.value = value
             return self
 
