@@ -9,7 +9,7 @@ from gherkinexecutor.Feature_Examples.ValueValid import ValueValid
 from gherkinexecutor.Feature_Examples.Feature_Examples_glue import FeatureExamplesGlue
 
 
-class FeatureExamples(unittest.TestCase):
+class Test_FeatureExamples(unittest.TestCase):
 
     def test_Scenario_Temperature(self):
         feature_examples_glue_object = FeatureExamplesGlue()
