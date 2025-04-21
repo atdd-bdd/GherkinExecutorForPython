@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 class Translate:
     def __init__(self):
@@ -53,6 +54,26 @@ class Translate:
         self.tagLine = ""  # Contains last tag line
         self.tagLineNumber = 0  # Line number for last tag line
 
+    @staticmethod
+    def themain(args):
+        Translate.print_flow("Gherkin Executor")
+        Configuration.current_directory = os.getcwd()
+        Translate.process_arguments(args)
+        if Configuration.search_tree and Configuration.starting_feature_directory:
+            files_in_tree = Translate.find_feature_files(Configuration.starting_feature_directory)
+            Translate.print_flow("Adding directory tree files")
+            for file in files_in_tree:
+                print(file)
+            Configuration.feature_files.extend(files_in_tree)
+        Translate.read_option_list()
+        Translate.read_filter_list()
+        Translate.read_feature_list()
+        for name in Configuration.feature_files:
+            translate = Translate()
+            Translate.print_flow(f"Translating {name}")
+            translate.translate_in_tests(name)
+
+
     def translate_in_tests(self, name):
         self.find_feature_directory(name)
 
@@ -90,7 +111,6 @@ class Translate:
             directory = name[:index + 1]
         self.featureDirectory = directory
         self.featurePackagePath = self.featureDirectory.replace("\\", ".").replace("/", ".")
-
 
         def act_on_line(self, line, pass_num):
             words, comment = self.split_line(line, pass_num)
@@ -143,8 +163,6 @@ class Translate:
         @staticmethod
         def word_without_hash(word):
             return re.sub(r"^#+|#+$", "", word)
-
-
 
     def act_on_keyword(self, keyword, words, comment, pass_num):
         full_name = self.make_full_name(words)
@@ -296,8 +314,6 @@ class Translate:
         temp = Translate.filter_word(temp)
         return temp[0].lower() + temp[1:]
 
-
-
     def act_on_scenario(self, full_name):
         self.scenario_count += 1
         full_name_to_use = full_name
@@ -364,7 +380,6 @@ class Translate:
         if Configuration.log_it:
             self.test_print(f"        log(\"{full_name_to_use}\");")
 
-
     def log_it(self):
         if Configuration.log_it:
             filename = os.path.join(self.directory_name, "log.txt")
@@ -388,7 +403,8 @@ class Translate:
         self.error_occurred = True
 
     def warning(self, value):
-        print(f"[GherkinExecutor] Warning ~ line {self.data_in.get_line_number()} in feature.txt {value}", file=sys.stderr)
+        print(f"[GherkinExecutor] Warning ~ line {self.data_in.get_line_number()} in feature.txt {value}",
+              file=sys.stderr)
 
     @staticmethod
     def print_flow(value):
@@ -419,7 +435,8 @@ class Translate:
             self.error(f"table not end with | {line}")
 
         elements = line_short.split('|')
-        elements_trimmed = [self.replace_defines(element.strip().replace(Configuration.space_characters, ' ')) for element in elements]
+        elements_trimmed = [self.replace_defines(element.strip().replace(Configuration.space_characters, ' ')) for
+                            element in elements]
         return elements_trimmed
 
     def look_for_follow(self):
@@ -542,24 +559,6 @@ class Translate:
                     path = file_path.replace(remove, "")
                     feature_files.append(path)
 
-    @staticmethod
-    def main(args):
-        Translate.print_flow("Gherkin Executor")
-        Configuration.current_directory = os.getcwd()
-        Translate.process_arguments(args)
-        if Configuration.search_tree and Configuration.starting_feature_directory:
-            files_in_tree = Translate.find_feature_files(Configuration.starting_feature_directory)
-            Translate.print_flow("Adding directory tree files")
-            for file in files_in_tree:
-                print(file)
-            Configuration.feature_files.extend(files_in_tree)
-        Translate.read_option_list()
-        Translate.read_filter_list()
-        Translate.read_feature_list()
-        for name in Configuration.feature_files:
-            translate = Translate()
-            Translate.print_flow(f"Translating {name}")
-            translate.translate_in_tests(name)
 
     @staticmethod
     def process_arguments(args):
@@ -690,8 +689,6 @@ class Translate:
             return
         Configuration.feature_files.extend(raw)
 
-
-
     def end_up(self):
         if self.final_cleanup:
             self.test_print(f"        test_Cleanup({self.glue_object}); // at the end")
@@ -717,7 +714,6 @@ class Translate:
             self.test_file.write(line + "\n")
         except IOError:
             self.error("IO ERROR")
-
 
     class InputIterator:
         EOF = "EOF"
@@ -817,6 +813,7 @@ class Translate:
                 i += 1
             result.append("".join(current))
             return result
+
         def peek(self):
             if self.index < len(self.lines_in):
                 return self.lines_in[self.index]
@@ -838,9 +835,6 @@ class Translate:
 
         def reset(self):
             self.index = 0
-
-
-
 
     class StepConstruct:
         def __init__(self, outer):
@@ -1076,7 +1070,6 @@ class Translate:
                 transposed.append(row)
             return transposed
 
-
     class TemplateConstruct:
         def __init__(self, outer):
             self.outer = outer
@@ -1161,102 +1154,121 @@ class Translate:
                 self.template_print("        raise NotImplementedError(\"Must implement\")")
             self.template_print("")
 
-        def begin_template(self):
-            self.template_print(f"package {self.package_path}")
-            for line in self.lines_to_add_for_data_and_glue:
-                self.template_print(line)
-            if Configuration.test_framework == "JUnit4":
-                self.template_print("import static org.junit.Assert.*")
-            elif Configuration.test_framework == "TestNG":
-                self.template_print("import static org.testng.Assert.*")
+
+        def beginTemplate(self):
+            self.templatePrint(f"package {self.packagePath};")
+            for line in self.linesToAddForDataAndGlue:
+                self.templatePrint(line)
+            if self.Configuration["testFramework"] == "JUnit4":
+                self.templatePrint("import static org.junit.Assert.*;")
+            elif self.Configuration["testFramework"] == "TestNG":
+                self.templatePrint("import static org.testng.Assert.*;")
             else:
-                self.template_print("import static org.junit.jupiter.api.Assertions.*")
-            self.template_print("import java.util.List")
-            if Configuration.log_it:
-                self.template_print("import java.io.FileWriter")
-                self.template_print("import java.io
+                self.templatePrint("import static org.junit.jupiter.api.Assertions.*;")
+            self.templatePrint("import java.util.List;")
+            if self.Configuration["logIt"]:
+                self.templatePrint("import java.io.FileWriter;")
+                self.templatePrint("import java.io.IOException;")
+            self.templatePrint("")
+            self.templatePrint(f"class {self.glueClass} {{")
+            self.templatePrint(f'    final String DNCString = "{self.Configuration["doNotCompare"]}";')
+            self.templatePrint(self.logIt())
+            self.templatePrint("")
 
-    class DataConstruct:
-        def __init__(self, outer):
-            self.outer = outer
-            self.data_definition_file = None
-            self.throw_string = ""  # needed if you want to catch errors in conversion methods
+        def endTemplate(self):
+            for line in self.linesToAddToEndOfGlue:
+                self.templatePrint(line)
+            self.templatePrint("    }")  # End the class
+            try:
+                self.testFile.close()
+                self.glueTemplateFile.close()
+            except IOError as e:
+                print(f"Error in closing: {e}")
 
-        class DataValues:
-            def __init__(self, name, default_val, data_type="String", notes=""):
-                self.name = name
-                self.default_val = default_val
-                self.data_type = data_type
-                self.notes = notes
 
-        def act_on_data(self, words):
-            if len(words) < 2:
-                self.outer.error("Need to specify data class name")
-                return
+class DataConstruct:
+    def __init__(self, outer):
+        self.outer = outer
+        self.data_definition_file = None
+        self.throw_string = ""  # needed if you want to catch errors in conversion methods
 
-            class_name = words[1]
-            provided_other_class_name = len(words) > 2
-            internal_class_name = words[2] if provided_other_class_name else f"{class_name}Internal"
+    class DataValues:
+        def __init__(self, name, default_val, data_type="String", notes=""):
+            self.name = name
+            self.default_val = default_val
+            self.data_type = data_type
+            self.notes = notes
 
-            follow = self.outer.look_for_follow()
-            follow_type = follow.get_first()
-            table = follow.get_second()
+    def act_on_data(self, words):
+        if len(words) < 2:
+            self.outer.error("Need to specify data class name")
+            return
 
-            if follow_type != "TABLE":
-                self.outer.error(f"Error table does not follow data {words[0]} {words[1]}")
-                return
+        class_name = words[1]
+        provided_other_class_name = len(words) > 2
+        internal_class_name = words[2] if provided_other_class_name else f"{class_name}Internal"
 
-            if class_name in self.outer.data_names:
-                class_name += str(self.outer.step_count)
-                self.outer.warning(f"Data name is duplicated, has been renamed {class_name}")
+        follow = self.outer.look_for_follow()
+        follow_type = follow.get_first()
+        table = follow.get_second()
 
-            self.outer.trace(f"Creating class for {class_name}")
-            self.outer.data_names[class_name] = ""
+        if follow_type != "TABLE":
+            self.outer.error(f"Error table does not follow data {words[0]} {words[1]}")
+            return
 
-            self.start_data_file(class_name, False)
-            self.data_print_ln(f"package {self.outer.package_path}")
-            for line in self.outer.lines_to_add_for_data_and_glue:
-                self.data_print_ln(line)
-            self.data_print_ln(f"class {class_name}:")
+        if class_name in self.outer.data_names:
+            class_name += str(self.outer.step_count)
+            self.outer.warning(f"Data name is duplicated, has been renamed {class_name}")
 
-            variables = []
-            do_internal = self.create_variable_list(table, variables)
-            for variable in variables:
-                self.outer.class_data_names.add(f"{class_name}#{variable.name}")
-                self.data_print_ln(f"    {variable.data_type} {self.outer.make_name(variable.name)} = \"{variable.default_val}\"")
+        self.outer.trace(f"Creating class for {class_name}")
+        self.outer.data_names[class_name] = ""
 
-            self.create_constructor(variables, class_name)
-            self.create_equals_method(variables, class_name)
-            self.create_builder_method(variables, class_name)
-            self.create_to_string_method(variables, class_name)
-            self.create_to_json_method(variables)
-            self.create_from_json_method(variables, class_name)
-            self.create_table_to_json_method(class_name)
-            self.create_json_to_table_method(class_name)
+        self.start_data_file(class_name, False)
+        self.data_print_ln(f"package {self.outer.package_path}")
+        for line in self.outer.lines_to_add_for_data_and_glue:
+            self.data_print_ln(line)
+        self.data_print_ln(f"class {class_name}:")
 
-            if do_internal:
-                self.outer.data_names_internal[internal_class_name] = ""
-                self.create_conversion_method(internal_class_name, variables)
+        variables = []
+        do_internal = self.create_variable_list(table, variables)
+        for variable in variables:
+            self.outer.class_data_names.add(f"{class_name}#{variable.name}")
+            self.data_print_ln(
+                f"    {variable.data_type} {self.outer.make_name(variable.name)} = \"{variable.default_val}\"")
 
-            self.data_print_ln("    }")
-            self.end_data_file()
+        self.create_constructor(variables, class_name)
+        self.create_equals_method(variables, class_name)
+        self.create_builder_method(variables, class_name)
+        self.create_to_string_method(variables, class_name)
+        self.create_to_json_method(variables)
+        self.create_from_json_method(variables, class_name)
+        self.create_table_to_json_method(class_name)
+        self.create_json_to_table_method(class_name)
 
-            if do_internal:
-                self.create_internal_class(internal_class_name, class_name, variables, provided_other_class_name)
+        if do_internal:
+            self.outer.data_names_internal[internal_class_name] = ""
+            self.create_conversion_method(internal_class_name, variables)
 
-        def create_json_to_table_method(self, class_name):
-            code = f"""
+        self.data_print_ln("    }")
+        self.end_data_file()
+
+        if do_internal:
+            self.create_internal_class(internal_class_name, class_name, variables, provided_other_class_name)
+
+    def create_json_to_table_method(self, class_name):
+        code = f"""
             @staticmethod
             def list_from_json(json: str) -> List[{class_name}]:
                 list = []
                 json = json.replace("\\s", "")
                 json = json.replace("[", "").replace("]", "")
-                json_objects = re.split(r'(?<=\\}),\\s*(?=\\{)', json)
+                json_objects = re.split(r'(?<=}}),\\s*(?={{)', json)
                 for json_object in json_objects:
                     list.append({class_name}.from_json(json_object))
                 return list
-            """
-            self.data_print_ln(code)
+        """
+        self.data_print_ln(code)
+
 
 class Translate:
     class DataConstruct:
@@ -1273,17 +1285,20 @@ class Translate:
                 self.data_type = data_type
                 self.notes = notes
 
+        import re
+        from typing import List
+
         def create_json_to_table_method(self, class_name):
             code = f"""
             @staticmethod
             def list_from_json(json: str) -> List[{class_name}]:
-                list = []
+                result_list = []
                 json = json.replace("\\s", "")
                 json = json.replace("[", "").replace("]", "")
-                json_objects = re.split(r'(?<=\\}),\\s*(?=\\{)', json)
+                json_objects = re.split(r"(?<=}}),\\s*(?={{)", json)
                 for json_object in json_objects:
-                    list.append({class_name}.from_json(json_object))
-                return list
+                    result_list.append({class_name}.from_json(json_object))
+                return result_list
             """
             self.data_print_ln(code)
 
@@ -1351,9 +1366,6 @@ class Translate:
             except IOError:
                 self.outer.error("IO ERROR")
 
-
-
-
         def create_constructor(self, variables, class_name):
             self.data_print_ln(f"    def __init__(self) -> None:")
             self.data_print_ln("        pass")
@@ -1364,7 +1376,8 @@ class Translate:
                 comma = ","
             self.data_print_ln("        ) -> None:")
             for variable in variables:
-                self.data_print_ln(f"        self.{self.outer.make_name(variable.name)} = {self.outer.make_name(variable.name)}")
+                self.data_print_ln(
+                    f"        self.{self.outer.make_name(variable.name)} = {self.outer.make_name(variable.name)}")
 
         def create_internal_constructor(self, variables, class_name):
             self.data_print_ln(f"    def __init__(self,")
@@ -1415,12 +1428,13 @@ class Translate:
         def create_to_json_method(self, variables):
             code = """
             def to_json(self) -> str:
-                return " {" + \\
+                return " {" + 
             """
             comma = ""
-            for variable in variables:
-                code += f'                {comma} "{variable.name}": \\" + str(self.{variable.name}) + \\"' + \\
-                comma = '         + ","'
+            ##   This needs some work
+      #      for variable in variables:
+       #         code += f'                {comma} "{variable.name}": \\" + str(self.{variable.name}) + \\"' +
+       #                 comma = '         + ","'
             code += '                "} "'
             self.data_print_ln(code)
 
@@ -1430,20 +1444,20 @@ class Translate:
             except IOError:
                 self.outer.error("IO ERROR")
 
-
-
         def create_builder_method(self, variables, class_name):
             self.data_print_ln("    class Builder:")
             for variable in variables:
                 self.data_print_ln(f"        def __init__(self) -> None:")
                 self.data_print_ln(f"            self.{variable.name} = {self.outer.quote_it(variable.default_val)}")
             for variable in variables:
-                self.data_print_ln(f"        def {self.outer.make_build_name(variable.name)}(self, {variable.name}: str) -> 'Builder':")
+                self.data_print_ln(
+                    f"        def {self.outer.make_build_name(variable.name)}(self, {variable.name}: str) -> 'Builder':")
                 self.data_print_ln(f"            self.{variable.name} = {variable.name}")
                 self.data_print_ln("            return self")
             self.data_print_ln("        def set_compare(self) -> 'Builder':")
             for variable in variables:
-                self.data_print_ln(f"            self.{variable.name} = {self.outer.quote_it(Configuration.do_not_compare)}")
+                self.data_print_ln(
+                    f"            self.{variable.name} = {self.outer.quote_it(Configuration.do_not_compare)}")
             self.data_print_ln("            return self")
             self.data_print_ln(f"        def build(self) -> {class_name}:")
             self.data_print_ln(f"            return {class_name}(")
@@ -1462,7 +1476,8 @@ class Translate:
             self.data_print_ln(f"        {variable_name} = other")
             self.data_print_ln("        result = True")
             for variable in variables:
-                self.data_print_ln(f"        if self.{variable.name} != {self.outer.quote_it(Configuration.do_not_compare)} and {variable_name}.{variable.name} != {self.outer.quote_it(Configuration.do_not_compare)}:")
+                self.data_print_ln(
+                    f"        if self.{variable.name} != {self.outer.quote_it(Configuration.do_not_compare)} and {variable_name}.{variable.name} != {self.outer.quote_it(Configuration.do_not_compare)}:")
                 self.data_print_ln(f"            if self.{variable.name} != {variable_name}.{variable.name}:")
                 self.data_print_ln("                result = False")
             self.data_print_ln("        return result")
@@ -1493,9 +1508,11 @@ class Translate:
                     self.outer.error(f"Data line has less than 2 entries {line}")
                     continue
                 if len(elements) > 3:
-                    variables.append(self.DataValues(self.outer.make_name(elements[0]), elements[1], self.alter_data_type(elements[2]), elements[3]))
+                    variables.append(self.DataValues(self.outer.make_name(elements[0]), elements[1],
+                                                     self.alter_data_type(elements[2]), elements[3]))
                 elif len(elements) > 2:
-                    variables.append(self.DataValues(self.outer.make_name(elements[0]), elements[1], self.alter_data_type(elements[2])))
+                    variables.append(self.DataValues(self.outer.make_name(elements[0]), elements[1],
+                                                     self.alter_data_type(elements[2])))
                 else:
                     variables.append(self.DataValues(self.outer.make_name(elements[0]), elements[1]))
             return do_internal
@@ -1549,7 +1566,8 @@ class Translate:
             and_str = ""
             for variable in variables:
                 comparison = " == " if self.primitive_data_type(variable) else ".equals"
-                self.data_print_ln(f"                {and_str}( {variable_name}.{variable.name} {comparison} self.{variable.name})")
+                self.data_print_ln(
+                    f"                {and_str}( {variable_name}.{variable.name} {comparison} self.{variable.name})")
                 and_str = " and "
 
         def primitive_data_type(self, variable):
@@ -1576,8 +1594,10 @@ class Translate:
             self.data_print_ln("        )")
 
         def make_value_to_string(self, variable, make_name_value):
-            value = self.outer.make_name(variable.name) if make_name_value else self.outer.quote_it(variable.default_val)
-            if variable.data_type in ["String", "int", "double", "byte", "short", "long", "float", "boolean", "char", "Byte", "Short", "Integer", "Long", "Float", "Double", "Boolean", "Character"]:
+            value = self.outer.make_name(variable.name) if make_name_value else self.outer.quote_it(
+                variable.default_val)
+            if variable.data_type in ["String", "int", "double", "byte", "short", "long", "float", "boolean", "char",
+                                      "Byte", "Short", "Integer", "Long", "Float", "Double", "Boolean", "Character"]:
                 return f"str({value})"
             return f"{value}.to_string()"
 
@@ -1637,7 +1657,6 @@ class Translate:
             if headers[:2] != expected[:2]:
                 self.outer.error(f"Headers should start with {expected}")
 
-
     class DefineConstruct:
         class DefineData:
             def __init__(self, name, value):
@@ -1683,8 +1702,6 @@ class Translate:
             if headers[:2] != expected[:2]:
                 self.outer.error(f"Headers should start with {expected}")
 
-
-
     class Configuration:
         log_it = False
         in_test = False
@@ -1725,7 +1742,8 @@ class Translate:
             TagFilterEvaluator.parse_expression(filter_expression, required_conditions, excluded_tags)
 
             has_excluded_tag = any(tag in excluded_tags for tag in scenario_tags)
-            matches_required = not required_conditions or any(scenario_tags.issuperset(tags) for tags in required_conditions)
+            matches_required = not required_conditions or any(
+                scenario_tags.issuperset(tags) for tags in required_conditions)
 
             return matches_required and not has_excluded_tag
 
@@ -1759,8 +1777,10 @@ class Pair:
     def __str__(self):
         return f"Pair{{key={self.key}, value={self.value}}}"
 
-import sys
 
-if __name__ == "__main__":
 
-    Translate.main(sys.argv[1:])
+
+ if __name__ == "__main__":
+
+
+
