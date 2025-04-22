@@ -39,7 +39,7 @@ class FeatureExamplesGlue:
                 assert i.c == c, i.notes
                 print(i)
             except Exception as e:
-                print (e)
+                print(e)
                 print(f"Argument Error  1 {value} {TemperatureCalculationInternal.to_data_type_string()}")
 
     def Rule_ID_must_have_exactly_5_letters_and_begin_with_Q(self, values: List[ValueValid]):

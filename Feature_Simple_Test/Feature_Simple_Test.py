@@ -1,5 +1,7 @@
 import unittest
 
+from Feature_Simple_Test_glue import FeatureSimpleTestGlue
+
 class FeatureSimpleTest(unittest.TestCase):
 
     @classmethod
@@ -15,6 +17,7 @@ class FeatureSimpleTest(unittest.TestCase):
             )
         ]
         self.feature_simple_test_glue_object.given_table_is(object_list1)
+
 
 if __name__ == '__main__':
     unittest.main()
