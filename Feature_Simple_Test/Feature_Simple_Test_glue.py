@@ -1,5 +1,5 @@
 class FeatureSimpleTestGlue:
-    def given_table_is(self, value):
+    def given_table_is(self, value : list):
         print("*******")
         print(value)
         self.fail("Must implement")

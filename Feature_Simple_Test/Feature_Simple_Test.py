@@ -1,14 +1,16 @@
 import unittest
 
-from Feature_Simple_Test_glue import FeatureSimpleTestGlue
+from tests.gherkinexecutor.Feature_Simple_Test.Feature_Simple_Test_glue import FeatureSimpleTestGlue
+from tests.gherkinexecutor.Feature_Simple_Test.ATest import ATest
+
 
 class FeatureSimpleTest(unittest.TestCase):
 
-    @classmethod
-    def setUpClass(cls):
-        cls.feature_simple_test_glue_object = FeatureSimpleTestGlue()
 
     def test_scenario_simple(self):
+
+        feature_simple_test_glue_object = FeatureSimpleTestGlue()
+
         object_list1 = [
             ATest(
                 an_int="1",
@@ -16,7 +18,7 @@ class FeatureSimpleTest(unittest.TestCase):
                 a_double="1.2"
             )
         ]
-        self.feature_simple_test_glue_object.given_table_is(object_list1)
+        feature_simple_test_glue_object.given_table_is(object_list1)
 
 
 if __name__ == '__main__':

@@ -22,7 +22,7 @@ class FeatureExamplesGlue:
 
     def log(self, value):
         try:
-            with open("src/test/java/gherkinexecutor/Feature_Examples/log.txt", "a") as myLog:
+            with open("./log.txt", "a") as myLog:
                 myLog.write(value + "\n")
         except IOError:
             print("**** Cannot write to log ")
