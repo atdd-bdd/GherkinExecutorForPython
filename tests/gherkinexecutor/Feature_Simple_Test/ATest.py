@@ -1,58 +1,51 @@
-from Feature_Simple_Test import *
-
-
-
+from tests.gherkinexecutor.ID import ID
+from tests.gherkinexecutor.TemperatureCalculations import TemperatureCalculations
 class ATest:
     def __init__(self,
-                 anInt: str = "0"
+                  anInt: str = "0"
                  , aString: str = "^"
                  , aDouble: str = "1.2"
-                 ) -> None:
+        ) -> None:
         self.anInt = anInt
         self.aString = aString
         self.aDouble = aDouble
-
     def __eq__(self, other) -> bool:
         if self is other:
             return True
         if other is None or not isinstance(other, self.__class__):
             return False
         _ATest = other
-        _ATest: ATest = o
+        _ATest:ATest=  o
         result1 = True;
         if (
-                not self.anInt == "?DNC?"
+             not self.anInt == "?DNC?"
                 and not _ATest.anInt == "?DNC?"):
-            if (not _ATest.anInt == self.anInt):
+                if (not  _ATest.anInt== self.anInt):
+                    result1 = False
                 result1 = False
-            result1 = False
         if (
-                not self.aString == "?DNC?"
+             not self.aString == "?DNC?"
                 and not _ATest.aString == "?DNC?"):
-            if (not _ATest.aString == self.aString):
+                if (not  _ATest.aString== self.aString):
+                    result1 = False
                 result1 = False
-            result1 = False
         if (
-                not self.aDouble == "?DNC?"
+             not self.aDouble == "?DNC?"
                 and not _ATest.aDouble == "?DNC?"):
-            if (not _ATest.aDouble == self.aDouble):
+                if (not  _ATest.aDouble== self.aDouble):
+                    result1 = False
                 result1 = False
-            result1 = False
         return result1
 
     def __str__(self) -> str:
-        return "ATest {" + \
-            " anInt = " + str(self.anInt) + " " + \
-            " aString = " + str(self.aString) + " " + \
-            " aDouble = " + str(self.aDouble) + " " + \
-            "} " + "\n" + "}"
-
-    def to_ATestInternal(self):
+        return "{ATest} {{" + \
+         " anInt = " + str(self.anInt) + " "  " aString = " + str(self.aString) + " "  " aDouble = " + str(self.aDouble) + " "  "} " + "\n" + "}"
+    def to_ATestInternal(self): 
         from tests.gherkinexecutor.Feature_Simple_Test.ATestInternal import ATestInternal
         return ATestInternal(
             int(self.anInt)
-            , self.aString
-            , float(self.aDouble)
+            ,self.aString
+            ,float(self.aDouble)
         )
 
     class Builder:
@@ -82,6 +75,6 @@ class ATest:
         def build(self):
             return ATest(
                 self.anInt
-                , self.aString
-                , self.aDouble
+                ,self.aString
+                ,self.aDouble
             )

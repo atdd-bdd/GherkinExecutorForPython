@@ -177,6 +177,11 @@ class Translate:
             if TagFilterEvaluator.should_not_execute(comment, self.filter_expression):
                 self.data_in.go_to_end()
                 print(" Skip Entire Feature ")
+        elif keyword == "Feature" and pass_num == 0:
+            self.act_on_feature_first_half(full_name)
+            if TagFilterEvaluator.should_not_execute(comment, self.filter_expression):
+                self.data_in.go_to_end()
+                print(" Skip Entire Feature ")
         elif keyword == "Scenario" and pass_num == 3:
             if TagFilterEvaluator.should_not_execute(comment, self.filter_expression):
                 self.skip_steps = True
@@ -236,8 +241,8 @@ class Translate:
         return temp
 
     def act_on_feature(self, full_name):
-        if self.act_on_feature_first_half(full_name):
-            return
+        # if self.act_on_feature_first_half(full_name):
+        #     return
 
         test_framework = Configuration.test_framework
         if test_framework == "unittest":
@@ -272,8 +277,8 @@ class Translate:
         if self.feature_acted_on:
             self.warning(f"Feature keyword duplicated - it is ignored {full_name}")
             return True
-        self.feature_name = full_name
         self.feature_acted_on = True
+        self.feature_name = full_name
         self.package_path = f"{Configuration.add_to_package_name}{Configuration.package_name}.{self.feature_package_path}{self.feature_name}"
         self.print_flow(f"Package is {self.package_path}")
         feature_test_name = "test_" + full_name
@@ -385,13 +390,13 @@ class Translate:
         if Configuration.log_it:
             filename = os.path.join(self.directory_name, "log.txt")
             return f"""
-            def log(value):
-               try:
-               with open("{filename}", "a") as my_log:
+    def log(value):
+       try:
+           with open("{filename}", "a") as my_log:
                my_log.write(value + "\\n")
-             except IOError:
-                print("*** Cannot write to log", file=sys.stderr)
-            """
+       except IOError:
+           print("*** Cannot write to log", file=sys.stderr)
+    """
         else:
             return ""
 
@@ -517,7 +522,7 @@ class Translate:
         try:
             raw = open(filepath).readlines()
         except Exception as e:
-            print(f"Error: Unable to read {e} {filepath}")
+            print(f"Unable to read {e} {filepath}")
             return
         arguments = [""]
         arguments = raw
@@ -531,7 +536,7 @@ class Translate:
         try:
             raw = open(filepath).readlines()
         except Exception as e:
-            print(f"Error: Unable to read {e} {filepath}")
+            print(f"Unable to read {e} {filepath}")
             return
         arguments = [""]
         arguments = raw
@@ -604,7 +609,6 @@ class Translate:
             value = Translate.quote_it(variable.default_val)
         if add_self:
             value = "self." + value
-        print("value is " + value)
         data_type = variable.data_type
         if data_type == "str":
             return value
@@ -693,7 +697,7 @@ class InputIterator:
                     else:
                         self.read_file(included_file_name, include_count)
                 else:
-                    if line and line[0] != '#':
+                    if len(line) > 1 and line[0] != '#':
                         self.lines_in.append(line.strip())
         except Exception as e:
             print(e)
@@ -821,7 +825,7 @@ class StepConstruct:
         self.outer.test_print(f"       string_list_list{s} :  {data_type}  = {data_type_initializer}(")
         comma = ""
         for line in table:
-            self.outer.convert_bar_line_to_list(line, comma)
+            self.convert_bar_line_to_list(line, comma)
             comma = ","
         self.outer.test_print("            )")
         self.outer.test_print(f"        {self.outer.glue_object}.{full_name}(string_list_list{s})")
@@ -831,14 +835,15 @@ class StepConstruct:
     def table_to_list_of_list(self, table, full_name):
         s = str(self.step_number_in_scenario)
         data_type = "List[List[str]]"
-        data_type_initializer = "list"
+        data_type_initializer = "["
 
-        self.outer.test_print(f"       string_list_list{s}  :  {data_type} = {data_type_initializer}(")
+        self.outer.test_print(f"        string_list_list{s} = {data_type_initializer}")
         comma = ""
+
         for line in table:
-            self.outer.convert_bar_line_to_list(line, comma)
+            self.convert_bar_line_to_list(line, comma)
             comma = ","
-        self.outer.test_print("            )")
+        self.outer.test_print("            ]")
         self.outer.test_print(f"        {self.outer.glue_object}.{full_name}(string_list_list{s})")
         self.outer.template_construct.make_function_template_is_list(data_type, full_name, "List[str]")
 
@@ -927,13 +932,13 @@ class StepConstruct:
 
     def convert_bar_line_to_list(self, line_in, comma_in):
         line = line_in.split("#")[0].strip()
-        self.outer.test_print(f"           {comma_in}list(")
+        self.outer.test_print(f"            {comma_in}[")
         elements = self.outer.parse_line(line)
         comma = ""
         for element in elements:
             self.outer.test_print(f"            {comma}\"{element}\"")
             comma = ","
-        self.outer.test_print("            )")
+        self.outer.test_print("            ]")
 
     def table_to_list_of_object(self, table, full_name, class_name, transpose, compare):
         self.outer.trace(f"TableToListOfObject class_names {class_name}")
@@ -1266,6 +1271,11 @@ class DataConstruct:
             self.data_definition_file.write(line + "\n")
         except IOError:
             self.outer.error("IO ERROR")
+    def data_print(self, line):
+        try:
+            self.data_definition_file.write(line)
+        except IOError:
+            self.outer.error("IO ERROR")
 
     def create_constructor(self, variables, class_name):
         self.data_print_ln(f"    def __init__(self,")
@@ -1291,13 +1301,13 @@ class DataConstruct:
 
     def create_to_string_method(self, variables, class_name):
         code = """
-            def __str__(self) -> str:
-                return "{class_name} {{" + \\
+    def __str__(self) -> str:
+        return "{CLASSNAME} {{" + \\
         """
-
+        code = code.replace("CLASSNAME", class_name)
         for variable in variables:
-            code += f'            " {variable.name} = " + str(self.{variable.name}) + " " + \\\n'
-        code += '            "} "'
+            code += f' " {variable.name} = " + str(self.{variable.name}) + " " '
+        code += ' "} "'
         if Configuration.add_line_to_string:
             code += ' + "\\n"'
         code += ' + "}"'
@@ -1403,8 +1413,7 @@ class DataConstruct:
 
     def create_conversion_method(self, internal_class_name, variables):
         self.data_print_ln(f"    def to_{internal_class_name}(self): ")
-        print(self.outer.make_import_for_data_class(internal_class_name))
-        self.data_print_ln(self.outer.make_import_for_data_class(internal_class_name) )
+        self.data_print_ln("        " + self.outer.make_import_for_data_class(internal_class_name) )
         self.data_print_ln(f"        return {internal_class_name}(")
         comma = ""
         for variable in variables:
@@ -1472,7 +1481,7 @@ class DataConstruct:
         self.data_print_ln("")
         self.create_data_type_to_string_object(class_name, variables)
         self.data_print_ln("")
-        self.create_to_string_object(other_class_name, variables)
+        self.create_conversion_to_string_object(other_class_name, variables)
         self.data_print_ln("")
         self.create_internal_constructor(variables, class_name)
         self.data_print_ln("")
@@ -1489,14 +1498,14 @@ class DataConstruct:
         self.data_print_ln("            return False")
         variable_name = f"_{class_name}"
         self.data_print_ln(f"        {variable_name} = other")
-        self.data_print_ln("        return ")
+        self.data_print("        return ")
         and_str = ""
         for variable in variables:
             comparison = " == " if self.primitive_data_type(variable) else "=="
-            self.data_print_ln(
-                f"                {and_str}( {variable_name}.{variable.name} {comparison} self.{variable.name})")
+            self.data_print(
+                f" {and_str}( {variable_name}.{variable.name} {comparison} self.{variable.name})")
             and_str = " and "
-
+        self.data_print_ln("")
     def primitive_data_type(self, variable):
         return variable.data_type in ["bool", "int", "float", "str", "complex"]
 
@@ -1510,12 +1519,13 @@ class DataConstruct:
             self.data_print_ln(f"        {add_str} {self.outer.quote_it(variable.data_type + space)} ")
         self.data_print_ln(f"        + {self.outer.quote_it('} ')}")
 
-    def create_to_string_object(self, other_class_name, variables):
-        self.data_print_ln(f"    def to_{other_class_name}(self) -> {other_class_name}:")
+    def create_conversion_to_string_object(self, other_class_name, variables):
+        self.data_print_ln(f"    def to_{other_class_name}(self) :")
+        self.data_print_ln("        " + self.outer.make_import_for_data_class(other_class_name) )
         self.data_print_ln(f"        return {other_class_name}(")
         comma = ""
         for variable in variables:
-            method = self.make_value_to_string(variable, True)
+            method = self.make_value_to_string(variable, True, True)
             self.data_print_ln(f"        {comma} {method}")
             comma = ","
         self.data_print_ln("        )")
@@ -1563,7 +1573,7 @@ class ImportConstruct:
 
         for im in imports:
             if im.import_name:
-                value = f"import {im.import_name}"
+                value = im.import_name
                 self.outer.lines_to_add_for_data_and_glue.append(value)
 
     def create_import_list(self, table, variables):
@@ -1658,7 +1668,8 @@ class Configuration:
     data_definition_file_extension = "py"
     test_framework = "unittest"
     add_to_package_name = feature_sub_directory
-    lines_to_add_for_data_and_glue = []
+    lines_to_add_for_data_and_glue = ["from tests.gherkinexecutor.ID import ID",
+                                      "from tests.gherkinexecutor.TemperatureCalculations import TemperatureCalculations"]
     feature_files = []
     tag_filter = ""
     filter_expression = ""

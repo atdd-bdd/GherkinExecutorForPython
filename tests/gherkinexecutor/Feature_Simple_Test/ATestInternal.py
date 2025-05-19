@@ -1,28 +1,28 @@
-from tests.gherkinexecutor.Feature_Simple_Test.ATest import ATest
-
-
+from tests.gherkinexecutor.ID import ID
+from tests.gherkinexecutor.TemperatureCalculations import TemperatureCalculations
 class ATestInternal:
 
     @staticmethod
     def to_data_type_string() -> str:
         return "ATestInternal {"
-        + "int "
-        + "str "
-        + "float "
+        + "int " 
+        + "str " 
+        + "float " 
         + "} "
 
     def to_ATest(self) :
+        from tests.gherkinexecutor.Feature_Simple_Test.ATest import ATest
         return ATest(
-            str(self.anInt)
-            , str(self.aString)
-            , str(self.aDouble)
+         str(self.anInt)
+        , str(self.aString)
+        , str(self.aDouble)
         )
 
     def __init__(self,
-                 anInt: int
-                 , aString: str
-                 , aDouble: float
-                 ) -> None:
+         anInt: int
+        , aString: str
+        , aDouble: float
+        ) -> None:
         self.anInt = anInt
         self.aString = aString
         self.aDouble = aDouble
@@ -33,13 +33,9 @@ class ATestInternal:
         if other is None or not isinstance(other, self.__class__):
             return False
         _ATestInternal = other
-        ret = (_ATestInternal.anInt == self.anInt) and (_ATestInternal.aString == self.aString) and (_ATestInternal.aDouble == self.aDouble)
-        return ret
+        return  ( _ATestInternal.anInt  ==  self.anInt)  and ( _ATestInternal.aString  ==  self.aString)  and ( _ATestInternal.aDouble  ==  self.aDouble)
 
 
     def __str__(self) -> str:
-        return "ATestInternal {" + \
-        " anInt = " + str(self.anInt) + " " + \
-        " aString = " + str(self.aString) + " " + \
-        " aDouble = " + str(self.aDouble) + " " + \
-        "} " + "\n" + "}"
+        return "{ATestInternal} {{" + \
+         " anInt = " + str(self.anInt) + " "  " aString = " + str(self.aString) + " "  " aDouble = " + str(self.aDouble) + " "  "} " + "\n" + "}"
