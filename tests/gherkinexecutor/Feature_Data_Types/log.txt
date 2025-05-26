@@ -1,0 +1,65 @@
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000002DEC54292B0>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000002DEC5416490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000002DEC54165D0>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000002DEC5474050>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000235E4DC9550>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000235E4DB6490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000235E4DB6710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000235E4E20050>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000183D9229400>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000183D9216490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000183D9216710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000183D9278180>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000026743109400>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000267430F6490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000267430F6710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000267431A8050>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000021E53349400>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000021E53336490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000021E53336710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000021E533E8050>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000015593639400>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000015593626490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000015593626710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000015593698050>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000218F0E19400>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000218F0E06490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000218F0E06710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000218F0E70180>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000001CC4DC29400>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000001CC4DC16490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000001CC4DC16710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000001CC4DC88050>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000023859F19400>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000023859F06490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000023859F06710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000023859FB8050>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000001C1EB509400>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000001C1EB4F6490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000001C1EB4F6710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x000001C1EB44FA80>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000023861C19400>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000023861C06490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000023861C06710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000023861B5FA80>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000222397992B0>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000022239786490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000022239786710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x00000222397F0050>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000015D26C892B0>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000015D26C76490>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000015D26C76710>, <tests.gherkinexecutor.Feature_Data_Types.SomeTypes.SomeTypes object at 0x0000015D270D4050>]

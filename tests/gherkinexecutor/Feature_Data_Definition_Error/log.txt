@@ -1,0 +1,18 @@
+Scenario_Simple_Table_with_double_bad
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition_Error.ATest.ATest object at 0x00000207985F9550>]
+Scenario_Simple_Table_with_initializer_bad
+---  Given_table_is_bad_initializer
+[<tests.gherkinexecutor.Feature_Data_Definition_Error.ATestBad.ATestBad object at 0x00000207985FA7B0>]
+Scenario_Simple_Table_with_int_bad
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition_Error.ATest.ATest object at 0x00000207985E7610>]
+Scenario_Simple_Table_with_double_bad
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition_Error.ATest.ATest object at 0x000001ADC99B9550>]
+Scenario_Simple_Table_with_initializer_bad
+---  Given_table_is_bad_initializer
+[<tests.gherkinexecutor.Feature_Data_Definition_Error.ATestBad.ATestBad object at 0x000001ADC99BA7B0>]
+Scenario_Simple_Table_with_int_bad
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition_Error.ATest.ATest object at 0x000001ADC99A7610>]

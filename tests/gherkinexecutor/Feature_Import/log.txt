@@ -1,0 +1,18 @@
+Scenario_Should_fail
+---  Given_this_data_should_fail
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000020817649400>]
+Scenario_Use_an_import
+---  Given_this_data_should_be_okay
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000020817637250>, <tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000020817637390>]
+Scenario_Should_fail
+---  Given_this_data_should_fail
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x00000297DF509550>]
+Scenario_Use_an_import
+---  Given_this_data_should_be_okay
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x00000297DF4F7250>, <tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x00000297DF4F7390>]
+Scenario_Should_fail
+---  Given_this_data_should_fail
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000021B37D99550>]
+Scenario_Use_an_import
+---  Given_this_data_should_be_okay
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000021B37D87250>, <tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000021B37D87390>]

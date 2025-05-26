@@ -1,0 +1,188 @@
+Scenario_Should_also_have_Background_and_Cleanup
+Scenario_Should_have_Background_and_Cleanup
+Scenario_Should_also_have_Background_and_Cleanup
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+cleanup
+---  Given_value_for_cleanup_should_be_set_to
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+cleanup
+---  Given_value_for_cleanup_should_be_set_to
+[['Cleanup Here']]
+Scenario_Should_also_have_Background_and_Cleanup
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+cleanup
+---  Given_value_for_cleanup_should_be_set_to
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+cleanup
+---  Given_value_for_cleanup_should_be_set_to
+[['Cleanup Here']]
+Scenario_Should_also_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+cleanup
+---  Given_value_for_cleanup_should_be_set_to
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+cleanup
+---  Given_value_for_cleanup_should_be_set_to
+[['Cleanup Here']]
+Scenario_Should_also_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_also_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_also_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_also_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_also_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_also_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_also_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]
+Scenario_Should_have_Background_and_Cleanup
+background
+---  Given_Background_function_sets_a_value
+[['Background Here']]
+---  Given_a_regular_function
+---  Then_background_should_set_value_to
+[['Background Here']]
+---  And_set_a_value_for_cleanup
+[['Cleanup Here']]

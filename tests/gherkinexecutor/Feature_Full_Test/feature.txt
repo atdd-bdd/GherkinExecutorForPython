@@ -1,0 +1,404 @@
+Feature: Full Test
+Feature: Data Definition
+Scenario Simple Comparison
+Given table is # ListOfObject ATest
+| anInt  | aString    | aDouble  |
+| 1      | something  | 1.2      |
+When compared to # ListOfObject ATest Compare
+| aString    |
+| something  |
+Then result is
+| true |
+When compared to # ListOfObject ATest Compare
+| aString         |
+| something else  |
+Then result is
+| false|
+Data ATest
+| Name     | Default  | Datatype  | Note  |
+| anInt    | 0        | Integer   |       |
+| aString  | ~        | String    |       |
+| aDouble  | 4.0      | Double    |       |
+Data TestIn Existing
+| Name    | Default  | Datatype  | Note  |
+| aValue  | 0        | int       |       |
+| bValue  | ~        | str       |       |
+| cValue  | 4.0      | float     |       |
+Scenario: Check All Types
+Given these are all the types  # ListOfObject AllTypes
+| anInt  | aFloat  | aBool  | aString  | aComplex  |
+| 0      | 0.0     | false  |          | 0+0j      |
+Data AllTypes
+| Name            | Default  | DataType  | Note       |
+| anInt           | 0        | int       | primitive  |
+| aFloat          | 0.0      | float     | primitive  |
+| aBool           | false    | bool      | primitive  |
+| aString         |          | str       | primitive  |
+| aComplex        | 0+0j     | complex   | primitive  |
+Feature: Data Types
+Scenario: Use the data types
+Given type values are  # ListOfObject SomeTypes
+| anInt  | aDouble  | aChar  | anchar  |
+| 0      | 0.0      | x      | y      |
+| 111    | 222.2    | q      |        |
+Then this should be equal # ListOfObject SomeTypes
+| anchar  | anInt  | aDouble  | aChar  |
+| y      | 0      | 0.0      | x      |
+|        | 111    | 222.2    | q      |
+Data SomeTypes
+| Name     | Default  | Data Type  | Notes  |
+| anInt    | 0        | int        |
+| aDouble  | 0.0      | Double     |        |
+| aChar    | x        | Character  |        |
+| anchar   | y        | char       |        |
+Feature: Data Definition Error
+Scenario Simple Table with int bad
+Given table is # ListOfObject ATest
+| anInt  | aString    | aDouble  |
+| q      | something  | 1.1      |
+Scenario Simple Table with double bad
+Given table is # ListOfObject ATest
+| anInt  | aString    | aDouble  |
+| 1      | something  | r        |
+Scenario Simple Table with initializer bad
+Given table is bad initializer # ListOfObject ATestBad
+| anInt  |
+| 1      |
+Data ATest
+| Name     | Default  | Datatype  | Note  |
+| anInt    | 0        | Int       |       |
+| aString  | ~        | String    |       |
+| aDouble  | 4.0      | Double    |       |
+Data ATestBad
+| Name     | Default  | Datatype  | Note  |
+| anInt    | a        | Int       |       |
+| aString  | ~        | String    |       |
+| aDouble  | b        | Double    |       |
+Feature: Define
+Define
+| Name       | Value | Notes                 |
+| HIGH_DATA  | 100   | Highest allowed input |
+| LOW_DATA   | 1     | Lowest allowed input  |
+Scenario:  Simple Replacement
+Given this data: # ListOfObject IDValue
+| ID  | Value     |
+| A   | HIGH_DATA |
+| B   | LOW_DATA  |
+Then should be equal to data: # ListOfObject IDValue
+| ID  | Value     |
+| A   | 100       |
+| B   | 1         |
+Define
+| Name           | Value                     | Notes                             |
+| AVERAGE_VALUE  | (LOW_DATA + HIGH_DATA)/2  | will be passed at "(1 + 100)/2)"  |
+Scenario:  Try out replacements with a calculation
+Given this data: # ListOfObject IDValue
+| ID  | Value          |
+| A   | HIGH_DATA      |
+| B   | LOW_DATA       |
+| C   | AVERAGE_VALUE  |
+Then should be equal to data: # ListOfObject IDValue
+| ID  | Value        |
+| A   | 100          |
+| B   | 1            |
+| C   | (1 + 100)/2  |
+Data IDValue
+| Name | Default |
+| ID   |         |
+| Value|         |
+Feature: Examples
+Scenario: Temperature Conversion
+Calculation Convert F to C # ListOfObject FandC
+| F    | C    | Notes       |
+| 32   | 0    | Freezing    |
+| 212  | 100  | Boiling     |
+| -40  | -40  | Below zero  |
+Data FandC
+| Name   | Default  | DataType  | Notes  |
+| F      | 0        | Integer   |        |
+| C      | 0        | Integer   |        |
+| Notes  |          | String    |        |
+Scenario: Domain Term ID
+Rule ID must have exactly 5 letters and begin with Q # ListOfObject ValueValid
+| Value   | Valid  | Notes              |
+| Q1234   | true   |                    |
+| Q123    | false  | Too short          |
+| Q12345  | false  | Too long           |
+| A1234   | false  | Must begin with Q  |
+Data ValueValid
+| Name   | Default  | DataType  |
+| Value  | 0        | String    |
+| Valid  | false    | Boolean   |
+| Notes  |          | String    |
+Scenario: Filter Data
+Given list of numbers # ListOfObject LabelValue
+| ID     | Value  |
+| Q1234  | 1      |
+| Q9999  | 2      |
+| Q1234  | 3      |
+When filtered by ID with value
+| Q1234  |
+Then sum is
+| 4 |
+Scenario: Filter Data Another Way
+Given list of numbers # ListOfObject LabelValue
+| ID     | Value  |
+| Q1234  | 1      |
+| Q9999  | 2      |
+| Q1234  | 3      |
+When filtered by # ListOfObject FilterValue transpose
+| Value  | Q1234  |
+Then result # ListOfObject ResultValue
+| Sum  |
+| 4    |
+* Data FilterValue
+| Name   | Default  | DataType  | Notes  |
+| Value  | Q0000    | ID        |        |
+* Data ResultValue
+| Name  | Default  | DataType  | Notes  |
+| Sum   |          | Integer   |        |
+* Data LabelValue
+| Name   | Default  | DataType  | Notes  |
+| ID     |          | ID        |        |
+| Value  | 0        | Integer   |        |
+Feature: Import
+Import
+| Datatype  | ConversionMethod           | Import                         | Notes  |
+| datetime  | datetime.fromisoformat($)  | from datetime import datetime  |        |
+Data ImportData
+| Name    | Default     | Datatype  | Notes  |
+| myDate  | 1900-01-21  | datetime  |        |
+Scenario: Use an import
+Given this data should be okay # ListOfObject ImportData
+| myDate    |
+| 2025-05-26|
+| 2025-05-27|
+Scenario: Should fail
+Given this data should fail # ListOfObject ImportData
+| myDate     |
+| 2025-02-30 |
+Feature: Include
+Scenario: An include
+Given a string include
+"""
+This is an include string from the main directory
+"""
+Then should be equal to
+"""
+This is an include string from the main directory
+"""
+Scenario: An include from base directory
+Given a string include
+"""
+This is an include string from the main directory
+"""
+Then should be equal to
+"""
+This is an include string from the main directory
+"""
+Scenario: An include of CSV file
+Given a table # ListOfObject CSVContents
+|A|B|C|
+|a|b,c|d,|
+|1|2|3|
+Then Should be equal to table # ListOfObject CSVContents
+| A  | B    | C   |
+| a  | b,c  | d,  |
+| 1  | 2    | 3   |
+Data CSVContents
+| Name  | Default  |
+| A     |          |
+| B     |          |
+| C     |          |
+Feature: Simple Test
+Scenario Simple
+Given table is # ListOfObject ATest
+| anInt  | aString    | aDouble  |
+| 1      | something  | 1.2      |
+Data ATest
+| Name     | Default  | Datatype  | Note  |
+| anInt    | 0        | Integer   |       |
+| aString  | ^        | String    |       |
+| aDouble  | 1.2      | Double    |       |
+Feature: Tables and Strings
+Scenario: Here are string options
+* A multiline string to a string
+"""
+One line
+Two line
+"""
+* A multiline string to a List of String # ListOfString
+"""
+Three line
+Four line
+"""
+Scenario: Check String Variations
+Given multiline string
+"""
+One line
+Two line
+"""
+Then should be equal to this list # ListOfString
+"""
+One line
+Two line
+"""
+Scenario: Here are table options
+* A table to List of List of String
+| aa  | bb  |
+| cc  | dd  |
+* A Table to List Of List Of Object # ListOfListOfObject int
+| 1 | 2 |
+| 3 | 4 |
+| 5 | 6 |
+* A table to List of Object # ListOfObject ExampleClass
+| FieldA  | FieldB  |
+| a       | b       |
+| c       | d       |
+* A table to List of Object # ListOfObject ExampleClass transpose
+| FieldA  | a  | c  |
+| FieldB  | b  | d  |
+* A table to List of Object with Defaults # ListOfObject ExampleClass
+| FieldA  |
+| a       |
+| c       |
+* A table to List of Object with Blanks in Values # ListOfObject ExampleClassWithBlanks
+| Field 1  | Field 2  |
+| ~        | b        |
+| c        | ~        |
+* A table to List of Object with Blanks in Defaults # ListOfObject ExampleClassWithBlanks
+| Field 1  |
+| ~        |
+| c        |
+* A table to String # String
+| aa  | bb  |
+| cc  | dd  |
+Scenario: Table to String
+Given A table to String # String
+| aa  | bb  |
+| cc  | dd  |
+Then string should be same as:
+"""
+| aa  | bb  |
+| cc  | dd  |
+"""
+Scenario: Table without all fields uses defaults
+Given A table to List of Object with Defaults # ListOfObject ExampleClass
+| FieldA  |
+| a       |
+| c       |
+Then table should be same as # ListOfObject ExampleClass
+| FieldA  | FieldB  |
+| a       | x       |
+| c       | x       |
+Scenario:  Transpose Table
+Given A table to List of Object # ListOfObject ExampleClass
+| FieldA  | FieldB  |
+| a       | b       |
+| c       | d       |
+Then transposed table to List of Object should be the same  # ListOfObject ExampleClass transpose
+| FieldA  | a  | c  |
+| FieldB  | b  | d  |
+Data ExampleClass
+| Name    | Default  |
+| FieldA  | y        |
+| FieldB  | x        |
+Data ExampleClassWithBlanks
+| Name     | Default  |
+| Field 1  | ~        |
+| Field 2  | ~        |
+Feature: Tic Tac Toe Game
+Scenario:  Make a move
+Given board is
+|   |   |   |
+|   |   |   |
+|   |   |   |
+When move is # ListOfObject Move transpose
+| Row     | 1  |
+| Column  | 2  |
+| Mark    | X  |
+Then board is now # String
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario:  Make a move using single element
+Given board is
+|   |   |   |
+|   |   |   |
+|   |   |   |
+When one move is #
+| 1,2,X |
+Then board is now # String
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario:  Make multiple moves
+Given board is
+|   |   |   |
+|   |   |   |
+|   |   |   |
+When moves are # ListOfObject Move transpose
+| Row     | 1  | 2  |
+| Column  | 2  | 3  |
+| Mark    | X  | O  |
+Then board is now # String
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Data Move
+| Name    | Default  | DataType  | Notes    |
+| Row     | 0        | Int       |          |
+| Column  | 0        | Int       |          |
+| Mark    | ^        | Char      | A space  |
+Scenario:  check the prints to see how it works
+Given board is
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Then board is now # String
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Feature: Json
+Scenario: Convert to Json
+Given one object is # ListOfObject SimpleClass
+| anInt  | aString  |
+| 1      | B        |
+Then Json should be
+"""
+{"anInt": "1","aString": "B"}
+"""
+Scenario: Convert from Json
+Given Json is
+"""
+{anInt:  "1"   ,   aString:"B"  }
+"""
+Then the converted object is # ListOfObject SimpleClass
+| anInt  | aString  |
+| 1      | B        |
+Scenario: Convert to Json Array
+Given a table is # ListOfObject SimpleClass
+| anInt  | aString  |
+| 1      | B        |
+| 2      | C        |
+Then Json for table should be
+"""
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+"""
+Scenario: Convert from Json Array
+Given Json for table is
+"""
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+"""
+Then the converted table should be # ListOfObject SimpleClass
+| anInt  | aString  |
+| 1      | B        |
+| 2      | C        |
+Data SimpleClass
+| Name     | Default  | Datatype  |
+| anInt    | 0        | Integer   |
+| aString  | Q        | String    |

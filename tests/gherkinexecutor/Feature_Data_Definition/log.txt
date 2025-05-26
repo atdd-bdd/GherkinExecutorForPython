@@ -1,0 +1,222 @@
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001A71F2996A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001DC867796A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000024D3E6E96A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000024D3E6D6350>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000002177A6E96A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000002177A6D6350>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001E06F0B96A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001E06F0A6490>]
+---  Then_result_is
+[['true']]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000002A6E45E96A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000002A6E45D65D0>]
+---  Then_result_is
+[['true']]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001EAE58596A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001EAE5846490>]
+---  Then_result_is
+[['true']]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x00000209C33E96A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x00000209C33D6490>]
+---  Then_result_is
+[['true']]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x00000256ED0596A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x00000256ED046490>]
+---  Then_result_is
+[['true']]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x00000203B16B96A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x00000203B16A6490>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x00000203B16A65D0>]
+---  Then_result_is
+[['false']]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001A3AF7396A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001A3AF726350>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001A3AF726490>]
+---  Then_result_is
+[['false']]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000022416F696A0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000022416F565D0>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000022416F56710>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001968A7FE7B0>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001968A7E7250>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001968A7E7390>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Data_Definition.AllTypes.AllTypes object at 0x000001C0CF91D6A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001C0CF91E900>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001C0CF907110>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001C0CF907250>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Data_Definition.AllTypes.AllTypes object at 0x000001A9C85FD6A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001A9C85FE900>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001A9C85E7250>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001A9C85E7390>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Data_Definition.AllTypes.AllTypes object at 0x000001AEB8AED6A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001AEB8AEE900>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001AEB8AD7250>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001AEB8AD7390>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Data_Definition.AllTypes.AllTypes object at 0x000001D0335996A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001D03359A900>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001D033587250>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001D033587390>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Data_Definition.AllTypes.AllTypes object at 0x000001D4CC56D6A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001D4CC56D160>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001D4CC556710>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001D4CC556850>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Data_Definition.AllTypes.AllTypes object at 0x0000023E1CDCD6A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000023E1CDCE900>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000023E1CDB7110>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000023E1CDB7250>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Data_Definition.AllTypes.AllTypes object at 0x000001AE5565D6A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001AE5565E900>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001AE55647110>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001AE55647250>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Data_Definition.AllTypes.AllTypes object at 0x0000026C382DD6A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000026C382DD160>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000026C382C6710>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x0000026C382C6850>]
+---  Then_result_is
+[['false']]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Data_Definition.AllTypes.AllTypes object at 0x000001F050C3D6A0>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001F050C3D160>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001F050C265D0>]
+---  Then_result_is
+[['true']]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Data_Definition.ATest.ATest object at 0x000001F050C26710>]
+---  Then_result_is
+[['false']]

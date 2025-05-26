@@ -1,0 +1,33 @@
+from tests.gherkinexecutor.ID import ID
+from tests.gherkinexecutor.TemperatureCalculations import TemperatureCalculations
+from tests.gherkinexecutor.Feature_Define import *
+from typing import List
+import sys
+
+class Feature_Define_glue :
+    DNCString = "?DNC?"
+
+    def log(self, value):
+        try:
+            with open("log.txt", "a") as my_log:
+                my_log.write(value + "\n")
+        except IOError:
+            print("*** Cannot write to log", file=sys.stderr)
+    
+
+    def Given_this_data(self, values: List[IDValue]) -> None:
+        print("---  " + "Given_this_data")
+        self.log("---  " + "Given_this_data")
+        self.log(str(values))
+        for value in values:
+            print(value)
+             # Add calls to production code and asserts
+
+    def Then_should_be_equal_to_data(self, values: List[IDValue]) -> None:
+        print("---  " + "Then_should_be_equal_to_data")
+        self.log("---  " + "Then_should_be_equal_to_data")
+        self.log(str(values))
+        for value in values:
+            print(value)
+             # Add calls to production code and asserts
+

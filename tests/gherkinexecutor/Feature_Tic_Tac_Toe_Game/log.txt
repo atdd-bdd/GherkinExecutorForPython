@@ -1,0 +1,34 @@
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000233ADD116A0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000233ADCF65D0>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000233ADCF6710>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
