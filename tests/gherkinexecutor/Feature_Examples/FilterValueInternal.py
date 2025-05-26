@@ -27,7 +27,6 @@ class FilterValueInternal:
         _FilterValueInternal = other
         return  ( _FilterValueInternal.value == self.value)
 
-
     def __str__(self) -> str:
         return "{FilterValueInternal} {{" + \
          " value = " + str(self.value) + " "  "} " + "\n" + "}"

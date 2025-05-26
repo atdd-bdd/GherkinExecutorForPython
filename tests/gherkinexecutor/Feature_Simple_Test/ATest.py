@@ -40,6 +40,7 @@ class ATest:
     def __str__(self) -> str:
         return "{ATest} {{" + \
          " anInt = " + str(self.anInt) + " "  " aString = " + str(self.aString) + " "  " aDouble = " + str(self.aDouble) + " "  "} " + "\n" + "}"
+
     def to_ATestInternal(self): 
         from tests.gherkinexecutor.Feature_Simple_Test.ATestInternal import ATestInternal
         return ATestInternal(

@@ -24,6 +24,7 @@ class FilterValue:
     def __str__(self) -> str:
         return "{FilterValue} {{" + \
          " value = " + str(self.value) + " "  "} " + "\n" + "}"
+
     def to_FilterValueInternal(self): 
         from tests.gherkinexecutor.Feature_Examples.FilterValueInternal import FilterValueInternal
         return FilterValueInternal(

@@ -25,8 +25,7 @@ class ResultValueInternal:
         if other is None or not isinstance(other, self.__class__):
             return False
         _ResultValueInternal = other
-        return  ( _ResultValueInternal.sum  ==  self.sum)
-
+        return  ( _ResultValueInternal.sum == self.sum)
 
     def __str__(self) -> str:
         return "{ResultValueInternal} {{" + \

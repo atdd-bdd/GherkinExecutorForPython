@@ -33,8 +33,7 @@ class FandCInternal:
         if other is None or not isinstance(other, self.__class__):
             return False
         _FandCInternal = other
-        return  ( _FandCInternal.f  ==  self.f)  and ( _FandCInternal.c  ==  self.c)  and ( _FandCInternal.notes  ==  self.notes)
-
+        return  ( _FandCInternal.f == self.f)  and ( _FandCInternal.c == self.c)  and ( _FandCInternal.notes == self.notes)
 
     def __str__(self) -> str:
         return "{FandCInternal} {{" + \

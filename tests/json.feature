@@ -6,7 +6,7 @@ Given one object is # ListOfObject SimpleClass
 | 1      | B        |
 Then Json should be 
 """
-{anInt:"1",aString:"B"}
+{"anInt": "1","aString": "B"}
 """
 
 Scenario: Convert from Json
@@ -25,8 +25,8 @@ Given a table is # ListOfObject SimpleClass
 | 2      | C        |
 Then Json for table should be 
 """
-[ {anInt:"1",aString:"B"} 
-, {anInt:"2",aString:"C"} 
+[ {"anInt": "1","aString": "B"} 
+, {"anInt": "2","aString": "C"} 
 ]
 """
 

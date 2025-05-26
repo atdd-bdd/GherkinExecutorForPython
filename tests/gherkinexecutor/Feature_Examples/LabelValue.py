@@ -32,6 +32,7 @@ class LabelValue:
     def __str__(self) -> str:
         return "{LabelValue} {{" + \
          " iD = " + str(self.iD) + " "  " value = " + str(self.value) + " "  "} " + "\n" + "}"
+
     def to_LabelValueInternal(self): 
         from tests.gherkinexecutor.Feature_Examples.LabelValueInternal import LabelValueInternal
         return LabelValueInternal(

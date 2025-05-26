@@ -1,3 +1,2 @@
-__all__ = ['ATest', 'ATestInternal']
-
-
+from tests.gherkinexecutor.Feature_Simple_Test.ATest import ATest
+from tests.gherkinexecutor.Feature_Simple_Test.ATestInternal import ATestInternal

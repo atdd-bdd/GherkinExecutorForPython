@@ -33,7 +33,7 @@ Scenario: Here are table options
 | aa  | bb  |
 | cc  | dd  |
 
-* A Table to List Of List Of Object # ListOfListOfObject Int32
+* A Table to List Of List Of Object # ListOfListOfObject int
 | 1 | 2 |
 | 3 | 4 |
 | 5 | 6 |

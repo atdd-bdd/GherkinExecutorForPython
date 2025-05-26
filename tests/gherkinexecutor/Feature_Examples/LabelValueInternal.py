@@ -29,8 +29,7 @@ class LabelValueInternal:
         if other is None or not isinstance(other, self.__class__):
             return False
         _LabelValueInternal = other
-        return  ( _LabelValueInternal.iD == self.iD)  and ( _LabelValueInternal.value  ==  self.value)
-
+        return  ( _LabelValueInternal.iD == self.iD)  and ( _LabelValueInternal.value == self.value)
 
     def __str__(self) -> str:
         return "{LabelValueInternal} {{" + \

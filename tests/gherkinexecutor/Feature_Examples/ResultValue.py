@@ -24,6 +24,7 @@ class ResultValue:
     def __str__(self) -> str:
         return "{ResultValue} {{" + \
          " sum = " + str(self.sum) + " "  "} " + "\n" + "}"
+
     def to_ResultValueInternal(self): 
         from tests.gherkinexecutor.Feature_Examples.ResultValueInternal import ResultValueInternal
         return ResultValueInternal(

@@ -40,6 +40,7 @@ class FandC:
     def __str__(self) -> str:
         return "{FandC} {{" + \
          " f = " + str(self.f) + " "  " c = " + str(self.c) + " "  " notes = " + str(self.notes) + " "  "} " + "\n" + "}"
+
     def to_FandCInternal(self): 
         from tests.gherkinexecutor.Feature_Examples.FandCInternal import FandCInternal
         return FandCInternal(

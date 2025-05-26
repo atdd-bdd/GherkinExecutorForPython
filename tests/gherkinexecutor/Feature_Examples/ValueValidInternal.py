@@ -33,8 +33,7 @@ class ValueValidInternal:
         if other is None or not isinstance(other, self.__class__):
             return False
         _ValueValidInternal = other
-        return  ( _ValueValidInternal.value  ==  self.value)  and ( _ValueValidInternal.valid  ==  self.valid)  and ( _ValueValidInternal.notes  ==  self.notes)
-
+        return  ( _ValueValidInternal.value == self.value)  and ( _ValueValidInternal.valid == self.valid)  and ( _ValueValidInternal.notes == self.notes)
 
     def __str__(self) -> str:
         return "{ValueValidInternal} {{" + \

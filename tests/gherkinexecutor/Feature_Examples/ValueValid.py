@@ -40,6 +40,7 @@ class ValueValid:
     def __str__(self) -> str:
         return "{ValueValid} {{" + \
          " value = " + str(self.value) + " "  " valid = " + str(self.valid) + " "  " notes = " + str(self.notes) + " "  "} " + "\n" + "}"
+
     def to_ValueValidInternal(self): 
         from tests.gherkinexecutor.Feature_Examples.ValueValidInternal import ValueValidInternal
         return ValueValidInternal(

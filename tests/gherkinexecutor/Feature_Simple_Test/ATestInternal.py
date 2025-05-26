@@ -33,8 +33,7 @@ class ATestInternal:
         if other is None or not isinstance(other, self.__class__):
             return False
         _ATestInternal = other
-        return  ( _ATestInternal.anInt  ==  self.anInt)  and ( _ATestInternal.aString  ==  self.aString)  and ( _ATestInternal.aDouble  ==  self.aDouble)
-
+        return  ( _ATestInternal.anInt == self.anInt)  and ( _ATestInternal.aString == self.aString)  and ( _ATestInternal.aDouble == self.aDouble)
 
     def __str__(self) -> str:
         return "{ATestInternal} {{" + \

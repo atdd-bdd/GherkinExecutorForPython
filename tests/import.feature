@@ -3,33 +3,25 @@ Feature: Import
 # creates the import statements for all the files (including the data files) 
 
 Import 
-| Datatype    | ConversionMethod                               | Import                 | Notes                 |
-| DayOfWeek   |  (DayOfWeek)Enum.Parse(typeof(DayOfWeek), $)   |                        | Enum that is created  |
-| BigInteger  | BigInteger.Parse($)                            | System.Numerics        |                       |
+| Datatype  | ConversionMethod           | Import                         | Notes  |
+| datetime  | datetime.fromisoformat($)  | from datetime import datetime  |        |
 
 Data ImportData 
-| Name       | Default             | Datatype      | Notes           |
-| myWeekday  | Monday              | DayOfWeek     | Uses an enum    |
-| myBigInt   | 1                   | BigInteger    | Uses import     |
+| Name    | Default     | Datatype  | Notes  |
+| myDate  | 1900-01-21  | datetime  |        |
 
 
 Scenario: Use an import
 Given this data should be okay # ListOfObject ImportData 
-| myWeekday  | myBigInt     |
-| Monday     | 1            |
-| Sunday     | 10000000000  |
+| myDate    |
+| 2025-05-26|
+| 2025-05-27|
 
 
 Scenario: Should fail 
 Given this data should fail # ListOfObject ImportData 
-| myWeekday  | myBigInt  |
-| Humpday    | 1         |
-| Sunday     | 2         |
+| myDate     |
+| 2025-02-30 |
 
-Scenario: Should also fail
-Given this data should fail # ListOfObject ImportData 
-| myWeekday  | myBigInt  |
-| Monday     | 1         |
-| Sunday     | A.2       |
 
 
