@@ -552,7 +552,7 @@ class Translate:
         try:
             raw = open(filepath).readlines()
         except Exception as e:
-            print(f"Unable to read {e} {filepath}")
+            # print(f"Unable to read {e} {filepath}")
             return
         arguments = [""]
         arguments = raw
@@ -566,7 +566,7 @@ class Translate:
         try:
             raw = open(filepath).readlines()
         except Exception as e:
-            print(f"Unable to read {e} {filepath}")
+            # print(f"Unable to read {e} {filepath}")
             return
         arguments = [""]
         arguments = raw
@@ -579,7 +579,7 @@ class Translate:
         try:
             raw = open(filepath).readlines()
         except Exception as e:
-            print(f"Unable to read {filepath} + {e}")
+            # print(f"Unable to read {filepath} + {e}")
             return
         lines = [line.strip() for line in raw]
         Configuration.feature_files.extend(lines)
