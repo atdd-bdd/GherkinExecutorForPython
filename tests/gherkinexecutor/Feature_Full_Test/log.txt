@@ -178,3 +178,183 @@ Scenario_check_the_prints_to_see_how_it_works
 | 0  | x  | 0  |
 | x  | 0  | x  |
 | 0  | x  | 0  |
+Scenario_An_include
+---  Given_a_string_include
+This is an include string from the main directory
+---  Then_should_be_equal_to
+This is an include string from the main directory
+Scenario_An_include_from_base_directory
+---  Given_a_string_include
+This is an include string from the main directory
+---  Then_should_be_equal_to
+This is an include string from the main directory
+Scenario_An_include_of_CSV_file
+---  Given_a_table
+[<tests.gherkinexecutor.Feature_Full_Test.CSVContents.CSVContents object at 0x0000012C1B080AD0>, <tests.gherkinexecutor.Feature_Full_Test.CSVContents.CSVContents object at 0x0000012C1AB77250>]
+---  Then_Should_be_equal_to_table
+[<tests.gherkinexecutor.Feature_Full_Test.CSVContents.CSVContents object at 0x0000012C1AB77390>, <tests.gherkinexecutor.Feature_Full_Test.CSVContents.CSVContents object at 0x0000012C1AFF7230>]
+Scenario_Check_All_Types
+---  Given_these_are_all_the_types
+[<tests.gherkinexecutor.Feature_Full_Test.AllTypes.AllTypes object at 0x0000012C1B0806E0>]
+Scenario_Check_String_Variations
+---  Given_multiline_string
+One line
+Two line
+---  Then_should_be_equal_to_this_list
+['One line', 'Two line']
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Full_Test.SimpleClass.SimpleClass object at 0x0000012C1B080AD0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Full_Test.SimpleClass.SimpleClass object at 0x0000012C1AB76C10>, <tests.gherkinexecutor.Feature_Full_Test.SimpleClass.SimpleClass object at 0x0000012C1AB77390>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Full_Test.SimpleClass.SimpleClass object at 0x0000012C1AFF6FD0>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Full_Test.SimpleClass.SimpleClass object at 0x0000012C1AFF7100>, <tests.gherkinexecutor.Feature_Full_Test.SimpleClass.SimpleClass object at 0x0000012C1AFEDEB0>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Domain_Term_ID
+---  Rule_ID_must_have_exactly_5_letters_and_begin_with_Q
+[<tests.gherkinexecutor.Feature_Full_Test.ValueValid.ValueValid object at 0x0000012C1B0806E0>, <tests.gherkinexecutor.Feature_Full_Test.ValueValid.ValueValid object at 0x0000012C1AB77390>, <tests.gherkinexecutor.Feature_Full_Test.ValueValid.ValueValid object at 0x0000012C1AB77250>, <tests.gherkinexecutor.Feature_Full_Test.ValueValid.ValueValid object at 0x0000012C1AFF6FD0>]
+Scenario_Filter_Data
+---  Given_list_of_numbers
+[<tests.gherkinexecutor.Feature_Full_Test.LabelValue.LabelValue object at 0x0000012C1B080AD0>, <tests.gherkinexecutor.Feature_Full_Test.LabelValue.LabelValue object at 0x0000012C1AB77250>, <tests.gherkinexecutor.Feature_Full_Test.LabelValue.LabelValue object at 0x0000012C1AB76D50>]
+---  When_filtered_by_ID_with_value
+[['Q1234']]
+---  Then_sum_is
+[['4']]
+Scenario_Filter_Data_Another_Way
+---  Given_list_of_numbers
+[<tests.gherkinexecutor.Feature_Full_Test.LabelValue.LabelValue object at 0x0000012C1AFF7100>, <tests.gherkinexecutor.Feature_Full_Test.LabelValue.LabelValue object at 0x0000012C1AFF7230>, <tests.gherkinexecutor.Feature_Full_Test.LabelValue.LabelValue object at 0x0000012C1AFEE210>]
+---  When_filtered_by
+[<tests.gherkinexecutor.Feature_Full_Test.FilterValue.FilterValue object at 0x0000012C1B080C20>]
+---  Then_result
+[<tests.gherkinexecutor.Feature_Full_Test.ResultValue.ResultValue object at 0x0000012C1B0806E0>]
+Scenario_Here_are_string_options
+---  Star_A_multiline_string_to_a_string
+One line
+Two line
+---  Star_A_multiline_string_to_a_List_of_String
+['Three line', 'Four line']
+Scenario_Here_are_table_options
+---  Star_A_table_to_List_of_List_of_String
+[['aa', 'bb'], ['cc', 'dd']]
+---  Star_A_Table_to_List_Of_List_Of_Object
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1B080C20>, <tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1AB76D50>]
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1AB76E90>, <tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1AFF7230>]
+---  Star_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1AFF7490>, <tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1AFEE450>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Values
+[<tests.gherkinexecutor.Feature_Full_Test.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000012C1B080AD0>, <tests.gherkinexecutor.Feature_Full_Test.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000012C1AB76AD0>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Defaults
+[<tests.gherkinexecutor.Feature_Full_Test.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000012C1AB76C10>, <tests.gherkinexecutor.Feature_Full_Test.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000012C1AFF7360>]
+---  Star_A_table_to_String
+| aa  | bb  |
+| cc  | dd  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Full_Test.Move.Move object at 0x0000012C1B080C20>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Full_Test.Move.Move object at 0x0000012C1AB76AD0>, <tests.gherkinexecutor.Feature_Full_Test.Move.Move object at 0x0000012C1AB76E90>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_Should_fail
+---  Given_this_data_should_fail
+[<tests.gherkinexecutor.Feature_Full_Test.ImportData.ImportData object at 0x0000012C1B080AD0>]
+Scenario_Simple
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Full_Test.ATest.ATest object at 0x0000012C1B081E80>]
+Scenario_Simple_Comparison
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Full_Test.ATest.ATest object at 0x0000012C1AB77390>]
+---  When_compared_to
+[<tests.gherkinexecutor.Feature_Full_Test.ATest.ATest object at 0x0000012C1AB77610>]
+Scenario_Simple_Replacement
+---  Given_this_data
+[<tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1B081D30>, <tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1AB77B10>]
+---  Then_should_be_equal_to_data
+[<tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1AB77C50>, <tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1AFF7820>]
+Scenario_Simple_Table_with_double_bad
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Full_Test.ATest.ATest object at 0x0000012C1AFF7490>]
+Scenario_Simple_Table_with_initializer_bad
+---  Given_table_is_bad_initializer
+[<tests.gherkinexecutor.Feature_Full_Test.ATestBad.ATestBad object at 0x0000012C1B081E80>]
+Scenario_Simple_Table_with_int_bad
+---  Given_table_is
+[<tests.gherkinexecutor.Feature_Full_Test.ATest.ATest object at 0x0000012C1AFF7BB0>]
+Scenario_Table_to_String
+---  Given_A_table_to_String
+| aa  | bb  |
+| cc  | dd  |
+---  Then_string_should_be_same_as
+| aa  | bb  |
+| cc  | dd  |
+Scenario_Table_without_all_fields_uses_defaults
+---  Given_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1B0E4270>, <tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1B0E4380>]
+---  Then_table_should_be_same_as
+[<tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1B00A950>, <tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1B00AC50>]
+Scenario_Temperature_Conversion
+---  Calculation_Convert_F_to_C
+[<tests.gherkinexecutor.Feature_Full_Test.FandC.FandC object at 0x0000012C1B081FD0>, <tests.gherkinexecutor.Feature_Full_Test.FandC.FandC object at 0x0000012C1AB77B10>, <tests.gherkinexecutor.Feature_Full_Test.FandC.FandC object at 0x0000012C1AB76D50>]
+Scenario_Transpose_Table
+---  Given_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1B070B90>, <tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1B070D70>]
+---  Then_transposed_table_to_List_of_Object_should_be_the_same
+[<tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1B0B9B70>, <tests.gherkinexecutor.Feature_Full_Test.ExampleClass.ExampleClass object at 0x0000012C1B0B9A90>]
+Scenario_Try_out_replacements_with_a_calculation
+---  Given_this_data
+[<tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1AFF7CE0>, <tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1AFEF530>, <tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1B0E4380>]
+---  Then_should_be_equal_to_data
+[<tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1B0E4160>, <tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1B00AC50>, <tests.gherkinexecutor.Feature_Full_Test.IDValue.IDValue object at 0x0000012C1B009F50>]
+Scenario_Use_an_import
+---  Given_this_data_should_be_okay
+[<tests.gherkinexecutor.Feature_Full_Test.ImportData.ImportData object at 0x0000012C1AB76D50>, <tests.gherkinexecutor.Feature_Full_Test.ImportData.ImportData object at 0x0000012C1AB77D90>]
+Scenario_Use_the_data_types
+---  Given_type_values_are
+[<tests.gherkinexecutor.Feature_Full_Test.SomeTypes.SomeTypes object at 0x0000012C1B081D30>, <tests.gherkinexecutor.Feature_Full_Test.SomeTypes.SomeTypes object at 0x0000012C1AB77D90>]
+---  Then_this_should_be_equal
+[<tests.gherkinexecutor.Feature_Full_Test.SomeTypes.SomeTypes object at 0x0000012C1AB77B10>, <tests.gherkinexecutor.Feature_Full_Test.SomeTypes.SomeTypes object at 0x0000012C1AFF7820>]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |

@@ -9,3 +9,4 @@ include.feature
 optional_tests.feature
 json.feature
 tic_tac_toe.feature
+testfeaturepackage/testfeaturedescent.feature

@@ -6,7 +6,6 @@ from tests.gherkinexecutor.Feature_Full_Test.AllTypes import AllTypes
 from tests.gherkinexecutor.Feature_Full_Test.AllTypesInternal import AllTypesInternal
 from tests.gherkinexecutor.Feature_Full_Test.SomeTypes import SomeTypes
 from tests.gherkinexecutor.Feature_Full_Test.SomeTypesInternal import SomeTypesInternal
-from tests.gherkinexecutor.Feature_Full_Test.ATest4 import ATest4
 from tests.gherkinexecutor.Feature_Full_Test.ATestBad import ATestBad
 from tests.gherkinexecutor.Feature_Full_Test.ATestBadInternal import ATestBadInternal
 from tests.gherkinexecutor.Feature_Full_Test.IDValue import IDValue
@@ -23,7 +22,6 @@ from tests.gherkinexecutor.Feature_Full_Test.LabelValueInternal import LabelValu
 from tests.gherkinexecutor.Feature_Full_Test.ImportData import ImportData
 from tests.gherkinexecutor.Feature_Full_Test.ImportDataInternal import ImportDataInternal
 from tests.gherkinexecutor.Feature_Full_Test.CSVContents import CSVContents
-from tests.gherkinexecutor.Feature_Full_Test.ATest14 import ATest14
 from tests.gherkinexecutor.Feature_Full_Test.ExampleClass import ExampleClass
 from tests.gherkinexecutor.Feature_Full_Test.ExampleClassWithBlanks import ExampleClassWithBlanks
 from tests.gherkinexecutor.Feature_Full_Test.Move import Move

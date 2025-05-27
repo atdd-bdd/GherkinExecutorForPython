@@ -4,6 +4,8 @@ from typing import List
 from tests.gherkinexecutor.ID import ID
 from tests.gherkinexecutor.TemperatureCalculations import TemperatureCalculations
 from datetime import datetime
+
+
 class ExampleClassWithBlanks:
     def __init__(self,
                  field_1: str = " "

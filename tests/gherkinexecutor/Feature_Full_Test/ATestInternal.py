@@ -11,9 +11,9 @@ class ATestInternal:
         + "float " 
         + "} "
 
-    def to_ATest14(self) :
-        from tests.gherkinexecutor.Feature_Full_Test.ATest14 import ATest14
-        return ATest14(
+    def to_ATest(self) :
+        from tests.gherkinexecutor.Feature_Full_Test.ATest import ATest
+        return ATest(
          str(self.anInt)
         , str(self.aString)
         , str(self.aDouble)

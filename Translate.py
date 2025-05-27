@@ -1151,8 +1151,8 @@ class DataConstruct:
             return
 
         if class_name in self.outer.data_names:
-            class_name += str(self.outer.step_count)
-            self.outer.warning(f"Data name is duplicated, has been renamed {class_name}")
+            self.outer.error(f"Data name is duplicated {class_name}")
+            return;
 
         self.outer.trace(f"Creating class for {class_name}")
         self.outer.data_names[class_name] = class_name
@@ -1163,6 +1163,8 @@ class DataConstruct:
         self.data_print_ln("from typing import List")
         for line in self.outer.lines_to_add_for_data_and_glue:
             self.data_print_ln(line)
+        self.data_print_ln("")
+        self.data_print_ln("")
         self.data_print_ln(f"class {class_name}:")
 
         variables = []
