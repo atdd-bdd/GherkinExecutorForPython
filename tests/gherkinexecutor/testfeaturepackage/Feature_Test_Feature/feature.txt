@@ -1,0 +1,18 @@
+Feature: Test Feature
+Scenario Include something
+Given local include
+"""
+This is an include string from the local directory
+"""
+Then string equals
+"""
+This is an include string from the local directory
+"""
+Given global include
+"""
+This is an include string from the main directory
+"""
+Then string equals
+"""
+This is an include string from the main directory
+"""
