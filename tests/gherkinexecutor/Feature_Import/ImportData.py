@@ -4,13 +4,16 @@ from typing import List
 from tests.gherkinexecutor.ID import ID
 from tests.gherkinexecutor.TemperatureCalculations import TemperatureCalculations
 from datetime import datetime
+from tests.gherkinexecutor.Feature_Import.Color import Color
 
 
 class ImportData:
     def __init__(self,
                  myDate: str = "1900-01-21"
+                , color: str = "RED"
                 ) -> None:
         self.myDate = myDate
+        self.color = color
 
     def __eq__(self, other) -> bool:
         if self is other:
@@ -22,16 +25,20 @@ class ImportData:
         if not (self.myDate == "?DNC?" or _ImportData.myDate == "?DNC?"):
             if not _ImportData.myDate == self.myDate:
                 result1 = False
+        if not (self.color == "?DNC?" or _ImportData.color == "?DNC?"):
+            if not _ImportData.color == self.color:
+                result1 = False
         return result1
 
 
     def __str__(self) -> str:
         return "{ImportData} {" + \
-         " myDate = " + str(self.myDate) + " "  "} " + "\n"
+         " myDate = " + str(self.myDate) + " "  " color = " + str(self.color) + " "  "} " + "\n"
 
     def to_json(self) -> str:
         return "{" + \
             '"myDate": "' + str(self.myDate) + '"' +  \
+            "," + '"color": "' + str(self.color) + '"' +  \
             "}"
 
     @staticmethod
@@ -46,6 +53,7 @@ class ImportData:
             value = entry[1].replace('\"', "").strip()
             switch = {
                    "myDate": lambda: setattr(instance, "myDate", value),
+                "color": lambda: setattr(instance, "color", value),
 
                 }
             switch.get(key, lambda: print(f"Invalid JSON element {key}", file=sys.stderr))()
@@ -79,21 +87,29 @@ class ImportData:
         from tests.gherkinexecutor.Feature_Import.ImportDataInternal import ImportDataInternal
         return ImportDataInternal(
             datetime.fromisoformat(self.myDate)
+            ,Color[self.color]
         )
 
     class Builder:
         def __init__(self) -> None:
             self.myDate = "1900-01-21"
+            self.color = "RED"
 
         def setMydate(self, myDate: str) -> 'Builder':
             self.myDate = myDate
             return self
 
+        def setColor(self, color: str) -> 'Builder':
+            self.color = color
+            return self
+
         def set_compare(self) -> 'Builder':
             self.myDate = "?DNC?"
+            self.color = "?DNC?"
             return self
 
         def build(self):
             return ImportData(
                 self.myDate
+                ,self.color
             )

@@ -276,9 +276,9 @@ class Translate:
         if test_framework == "unittest":
             self.test_print(f"class {full_name}(unittest.TestCase):")
         elif test_framework == "pytest":
-            self.test_print(f"class {full_name}():")
+            self.test_print(f"class {full_name}:")
         else:
-            self.test_print(f"class {full_name}():")
+            self.test_print(f"class {full_name}:")
 
         self.test_print(self.log_it())
 
@@ -1474,6 +1474,8 @@ class DataConstruct:
 
         for line in self.outer.lines_to_add_for_data_and_glue:
             self.data_print_ln(line)
+        self.data_print_ln("")
+        self.data_print_ln("")
         self.data_print_ln(f"class {class_name}:")
         self.data_print_ln("")
         self.create_data_type_to_string_object(class_name, variables)

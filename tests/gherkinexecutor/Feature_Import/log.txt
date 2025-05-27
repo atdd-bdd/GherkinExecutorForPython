@@ -16,3 +16,33 @@ Scenario_Should_fail
 Scenario_Use_an_import
 ---  Given_this_data_should_be_okay
 [<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000021B37D87250>, <tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000021B37D87390>]
+Scenario_Should_fail
+---  Given_this_data_should_fail
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x000001683E7E96A0>]
+Scenario_Use_an_import
+---  Given_this_data_should_be_okay
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x000001683E7D7610>, <tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x000001683E7D7750>]
+Scenario_Should_fail
+---  Given_this_data_should_fail
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x00000253D2F49550>]
+Scenario_Use_an_import
+---  Given_this_data_should_be_okay
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x00000253D2F37610>, <tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x00000253D2F37750>]
+Scenario_Should_fail
+---  Given_this_data_should_fail
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x000001D739979550>]
+Scenario_Use_an_import
+---  Given_this_data_should_be_okay
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x000001D739967610>, <tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x000001D739967750>]
+Scenario_Should_fail
+---  Given_this_data_should_fail
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000029FBAB99550>]
+Scenario_Use_an_import
+---  Given_this_data_should_be_okay
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000029FBAB87890>, <tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x0000029FBAB879D0>]
+Scenario_Should_fail
+---  Given_this_data_should_fail
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x000001819C9397F0>]
+Scenario_Use_an_import
+---  Given_this_data_should_be_okay
+[<tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x000001819C927890>, <tests.gherkinexecutor.Feature_Import.ImportData.ImportData object at 0x000001819C9279D0>]

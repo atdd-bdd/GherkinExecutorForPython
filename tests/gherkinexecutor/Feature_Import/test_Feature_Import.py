@@ -22,9 +22,11 @@ class Feature_Import(unittest.TestCase):
         object_list1 : List[ImportData] = [
             ImportData.Builder()
                 .setMydate("2025-05-26")
+                .setColor("BLUE")
                 .build()
             ,ImportData.Builder()
                 .setMydate("2025-05-27")
+                .setColor("GREEN")
                 .build()
             ]
         feature_Import_glue_object.Given_this_data_should_be_okay(object_list1)
