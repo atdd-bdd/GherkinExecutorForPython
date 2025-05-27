@@ -1663,7 +1663,7 @@ class Configuration:
     data_definition_file_extension = "py"
     test_framework = "unittest"
     add_to_package_name = feature_sub_directory
-    lines_to_add_for_data_and_glue = []
+    lines_to_add_for_data_and_glue = [ ]
     feature_files = []
     tag_filter = ""
     filter_expression = ""
