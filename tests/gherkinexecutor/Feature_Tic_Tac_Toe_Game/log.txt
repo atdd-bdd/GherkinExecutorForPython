@@ -1,0 +1,698 @@
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000233ADD116A0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000233ADCF65D0>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000233ADCF6710>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001633EE9D7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001633EE87750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001633EE87890>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001B918BFD7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000276C5D6D7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001817F70D6A0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000025827C2D7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000025827C17750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000025827C17890>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000246E08CD7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000246E08B7750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000246E08B7890>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001C2EF00D7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001C2EEFF7750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001C2EEFF7890>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001A8574BD7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001A8574A7750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001A8574A7890>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000025D4854D7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000025D48537750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000025D48537890>]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001CE7CC9D7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001CE7CC87750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001CE7CC87890>]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001E4D59BD7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001E4D59A7750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001E4D59A7890>]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000177DFF0D7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000177DFEF7750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000177DFEF7890>]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000020F84D4D7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000020F84D37750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000020F84D37890>]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001DF140ED6A0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001DF140D7750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001DF140D7890>]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001A456A9D7F0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001A456A87750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001A456A87890>]
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000022731571940>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000022731557750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x0000022731557890>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001C5E2F2D6A0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001C5E2F17750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001C5E2F17890>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001E7EFC2D6A0>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001E7EFC17750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001E7EFC17890>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000248F13ED940>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000248F13D7750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x00000248F18242B0>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001BE2DC0D940>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001BE2DBF7750>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001BE2DBF7890>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |
+Scenario_Make_a_move
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001BBED87D940>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_a_move_using_single_element
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+Scenario_Make_multiple_moves
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001BBED866990>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001BBED8F4180>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+Scenario_check_the_prints_to_see_how_it_works
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |

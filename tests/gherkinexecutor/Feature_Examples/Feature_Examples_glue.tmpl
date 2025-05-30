@@ -1,0 +1,77 @@
+from tests.gherkinexecutor.ID import ID
+from tests.gherkinexecutor.TemperatureCalculations import TemperatureCalculations
+from tests.gherkinexecutor.Feature_Examples import *
+from typing import List
+
+class Feature_Examples_glue :
+    DNCString = "?DNC?"
+
+    def log(self, value):
+        try:
+            with open("log.txt", "a") as my_log:
+                my_log.write(value + "\n")
+        except IOError:
+            print("*** Cannot write to log", file=sys.stderr)
+    
+
+    def Calculation_Convert_F_to_C(self, values: List[FandC]) -> None:
+        print("---  " + "Calculation_Convert_F_to_C")
+        self.log("---  " + "Calculation_Convert_F_to_C")
+        self.log(str(values))
+        for value in values:
+            print(value)
+             # Add calls to production code and asserts
+            i = value.to_FandCInternal()
+
+    def Rule_ID_must_have_exactly_5_letters_and_begin_with_Q(self, values: List[ValueValid]) -> None:
+        print("---  " + "Rule_ID_must_have_exactly_5_letters_and_begin_with_Q")
+        self.log("---  " + "Rule_ID_must_have_exactly_5_letters_and_begin_with_Q")
+        self.log(str(values))
+        for value in values:
+            print(value)
+             # Add calls to production code and asserts
+            i = value.to_ValueValidInternal()
+
+    def Given_list_of_numbers(self, values: List[LabelValue]) -> None:
+        print("---  " + "Given_list_of_numbers")
+        self.log("---  " + "Given_list_of_numbers")
+        self.log(str(values))
+        for value in values:
+            print(value)
+             # Add calls to production code and asserts
+            i = value.to_LabelValueInternal()
+
+    def When_filtered_by_ID_with_value(self, values: List[List[str]]) -> None:
+        print("---  " + "When_filtered_by_ID_with_value")
+        self.log("---  " + "When_filtered_by_ID_with_value")
+        self.log(str(values))
+        for value in values:
+            print(value)
+             # Add calls to production code and asserts
+
+    def Then_sum_is(self, values: List[List[str]]) -> None:
+        print("---  " + "Then_sum_is")
+        self.log("---  " + "Then_sum_is")
+        self.log(str(values))
+        for value in values:
+            print(value)
+             # Add calls to production code and asserts
+
+    def When_filtered_by(self, values: List[FilterValue]) -> None:
+        print("---  " + "When_filtered_by")
+        self.log("---  " + "When_filtered_by")
+        self.log(str(values))
+        for value in values:
+            print(value)
+             # Add calls to production code and asserts
+            i = value.to_FilterValueInternal()
+
+    def Then_result(self, values: List[ResultValue]) -> None:
+        print("---  " + "Then_result")
+        self.log("---  " + "Then_result")
+        self.log(str(values))
+        for value in values:
+            print(value)
+             # Add calls to production code and asserts
+            i = value.to_ResultValueInternal()
+

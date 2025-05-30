@@ -1,0 +1,20 @@
+Scenario_Simple_Replacement
+---  Given_this_data
+[<tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x00000258656BD2B0>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x00000258656A65D0>]
+---  Then_should_be_equal_to_data
+[<tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x00000258656A6710>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x00000258655FF950>]
+Scenario_Try_out_replacements_with_a_calculation
+---  Given_this_data
+[<tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x00000258655FFCE0>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x0000025865B00950>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x00000258656238A0>]
+---  Then_should_be_equal_to_data
+[<tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x0000025865620270>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x0000025865640F50>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x0000025865641850>]
+Scenario_Simple_Replacement
+---  Given_this_data
+[<tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9BC92B0>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9BB6710>]
+---  Then_should_be_equal_to_data
+[<tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9BB6850>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9B0F820>]
+Scenario_Try_out_replacements_with_a_calculation
+---  Given_this_data
+[<tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9B0FBB0>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9C4C950>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9B338A0>]
+---  Then_should_be_equal_to_data
+[<tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9B30270>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9B50F50>, <tests.gherkinexecutor.Feature_Define.IDValue.IDValue object at 0x000001B3E9B51850>]

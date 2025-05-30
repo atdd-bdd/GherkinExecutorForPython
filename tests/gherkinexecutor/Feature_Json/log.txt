@@ -1,0 +1,960 @@
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FDE565DA90>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FDE5646AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FDE5646C10>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FDE568C180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FDE568C3E0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FDE562AB10>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000181D2AF97F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000181D2AE6AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000181D2AE6C10>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000181D2B2C180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000181D2B2CFC0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000181D2B3D130>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A9B20B97F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A9B20A6AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A9B20A6C10>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A9B20EC180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A9B20ECFC0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A9B20FDD90>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002328C7897F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002328C776AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002328C776C10>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002328C7BC180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002328C7BCFC0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002328C7CDD90>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F0953297F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F095316AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F095316C10>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F09535C180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F09535CFC0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F09536DD90>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000271B33697F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000271B3356AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000271B3356C10>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000271B339C180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000271B339CFC0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000271B33ADD90>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002764D1297F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002764D116AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002764D116C10>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002764D15C180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002764D15CFC0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002764D16DD90>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002A77DBA97F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002A77DB96AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002A77DB96C10>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002A77DBDC180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002A77DBDCFC0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002A77DBFDD90>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000265D452DA90>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000265D4516AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000265D4516C10>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000265D455C180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000265D455CFC0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000265D496DD90>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001C0988897F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001C098877750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001C0988BC9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001C0988BC9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001C09885AB10>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001C0988B5040>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B93C9596A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B93C947750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B93C98C9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B93C98C9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B93C92A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B93C984E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002BFD74496A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002BFD7437750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002BFD747C9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002BFD747C9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002BFD741A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002BFD7474E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001BB9AA796A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001BB9AA67750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001BB9AAACB00>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001BB9AAACB00>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001BB9AA4A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001BB9AAA4E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B73E4996A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B73E487750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B73E4CCB00>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B73E4CCB00>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B73E46A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B73E4C4E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000150053A96A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000015005397750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000150053DCB00>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000150053DCB00>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001500537A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000150053D4E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A0EF1E97F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A0EF1D7750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A0EF21CB00>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A0EF21CB00>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A0EF1BA0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001A0EF214F30>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F09B3397F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F09B327750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F09B36C9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F09B36C9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F09B30A8D0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F09B365040>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000228E81B96A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000228E81A7750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000228E81EC9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000228E81EC9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000228E818A8D0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000228E81E5040>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028E399D96A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028E399C7750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028E39A0C9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028E39A0C9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028E399AA8D0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028E39A04F30>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021A312596A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021A31247750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021A3128CB00>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021A3128CB00>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021A3122A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021A31284E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FB5FFE96A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FB5FFD7750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FB6001C9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FB6001C9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FB5FFBA0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001FB60014E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028431A396A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028431A27750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028431A6C9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028431A6C9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028431A0A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028431A64E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000020F267196A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000020F26707750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000020F2674C9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000020F2674C9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000020F266EA0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000020F26744E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001299C8096A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001299C7F6AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001299C83C180>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001299C83C180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001299C88D130>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001299C773AC0>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AB849BD940>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AB849A7750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AB849EC9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AB849EC9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AB8498AB10>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AB849E4F30>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AA0E0A96A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AA0E097750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AA0E0DC9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AA0E0DC9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AA0E07A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001AA0E0D4E20>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027FD973D940>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027FD9727750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027FD976C9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027FD976C9D0>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027FD970AB10>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027FD9764F30>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B191DD96A0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B191DC6AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B191E0C180>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B191E0C180>]
+---  Then_Json_should_be
+{anInt:"1",aString:"B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B19222D130>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001B191D43AC0>]
+---  Then_Json_for_table_should_be
+[ {anInt:"1",aString:"B"}
+, {anInt:"2",aString:"C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002E19FAAD940>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002E19FA97750>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002E19FADC9D0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002E19FADC9D0>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002E19FA7A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002E19FA12250>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028F3D2ED940>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028F3D2D6AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028F3D31C180>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028F3D31C180>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028F3D2BA0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028F3D2538A0>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000297DDF4D940>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000297DDF36AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000297DDF7C180>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000297DDF7C180>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000297DDF1A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000297DDEB38A0>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027A0905D940>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027A09046AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027A0908C180>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027A0908C180>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027A0902A0F0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000027A08FC38A0>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000018F07F39400>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000018F07F26AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000018F07F6C3E0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000018F07F6D0F0>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000018F07F0AB10>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000018F07F64050>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021E9E12D7F0>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021E9E116AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021E9E15C2B0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021E9E15D0F0>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021E9E0FA8D0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021E9E093AC0>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021D65739400>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021D65726AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021D6576C3E0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021D656A2250>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021D656A2140>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000021D656C3450>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F00C289400>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F00C276C10>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F00C2BC2B0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F00C1F2140>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F00C1F18C0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000001F00C213450>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028AFCDE9400>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028AFCDD6AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028AFCE1C2B0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028AFCD52140>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028AFCD518C0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000028AFCD73450>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002478C6C9400>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002478C6B6AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002478C6FC2B0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002478C632140>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002478C6318C0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x000002478C653450>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000289F5C99400>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000289F5C86AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000289F5CCC2B0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000289F5C02140>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000289F5C018C0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000289F5C23450>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+Scenario_Convert_from_Json
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000210A69A9400>]
+Scenario_Convert_from_Json_Array
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000210A6996AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000210A69DC2B0>]
+Scenario_Convert_to_Json
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000210A6912140>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+Scenario_Convert_to_Json_Array
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000210A69118C0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000210A6933450>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]

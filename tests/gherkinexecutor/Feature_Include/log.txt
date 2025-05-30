@@ -1,0 +1,41 @@
+Scenario_An_include
+---  Given_a_string_include
+This is an include string from the main directory
+---  Then_should_be_equal_to
+This is an include string from the main directory
+Scenario_An_include_from_base_directory
+---  Given_a_string_include
+This is an include string from the main directory
+---  Then_should_be_equal_to
+This is an include string from the main directory
+Scenario_An_include_of_CSV_file
+Scenario_An_include
+---  Given_a_string_include
+This is an include string from the main directory
+---  Then_should_be_equal_to
+This is an include string from the main directory
+Scenario_An_include_from_base_directory
+---  Given_a_string_include
+This is an include string from the main directory
+---  Then_should_be_equal_to
+This is an include string from the main directory
+Scenario_An_include_of_CSV_file
+---  Given_a_table
+[<tests.gherkinexecutor.Feature_Include.CSVContents.CSVContents object at 0x000002B27D39D010>, <tests.gherkinexecutor.Feature_Include.CSVContents.CSVContents object at 0x000002B27D3865D0>]
+---  Then_Should_be_equal_to_table
+[<tests.gherkinexecutor.Feature_Include.CSVContents.CSVContents object at 0x000002B27D386710>, <tests.gherkinexecutor.Feature_Include.CSVContents.CSVContents object at 0x000002B27D2DF5C0>]
+Scenario_An_include
+---  Given_a_string_include
+This is an include string from the main directory
+---  Then_should_be_equal_to
+This is an include string from the main directory
+Scenario_An_include_from_base_directory
+---  Given_a_string_include
+This is an include string from the main directory
+---  Then_should_be_equal_to
+This is an include string from the main directory
+Scenario_An_include_of_CSV_file
+---  Given_a_table
+[<tests.gherkinexecutor.Feature_Include.CSVContents.CSVContents object at 0x000002E4B5088D70>, <tests.gherkinexecutor.Feature_Include.CSVContents.CSVContents object at 0x000002E4B50765D0>]
+---  Then_Should_be_equal_to_table
+[<tests.gherkinexecutor.Feature_Include.CSVContents.CSVContents object at 0x000002E4B5076710>, <tests.gherkinexecutor.Feature_Include.CSVContents.CSVContents object at 0x000002E4B4FCF6F0>]

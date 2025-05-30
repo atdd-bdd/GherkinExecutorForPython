@@ -1,0 +1,2 @@
+from tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass import ExampleClass
+from tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks import ExampleClassWithBlanks

@@ -1,0 +1,326 @@
+Scenario_Check_String_Variations
+---  Given_multiline_string
+One line
+            Two line
+---  Then_should_be_equal_to_this_list
+['One line', 'Two line']
+Scenario_Here_are_string_options
+---  Star_A_multiline_string_to_a_string
+One line
+            Two line
+---  Star_A_multiline_string_to_a_List_of_String
+['Three line', 'Four line']
+Scenario_Here_are_table_options
+---  Star_A_table_to_List_of_List_of_String
+[['aa', 'bb'], ['cc', 'dd']]
+Scenario_Table_to_String
+---  Given_A_table_to_String
+| aa  | bb  |
+            | cc  | dd  |
+---  Then_string_should_be_same_as
+| aa  | bb  |
+            | cc  | dd  |
+Scenario_Table_without_all_fields_uses_defaults
+---  Given_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001F57FE5A7B0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001F57FE46D50>]
+---  Then_table_should_be_same_as
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001F57FE46FD0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001F57FE8CB00>]
+Scenario_Transpose_Table
+---  Given_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001F57FD9EB10>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001F57FEB2210>]
+---  Then_transposed_table_to_List_of_Object_should_be_the_same
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001F57FE84270>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001F57FE84F30>]
+Scenario_Check_String_Variations
+---  Given_multiline_string
+One line
+            Two line
+---  Then_should_be_equal_to_this_list
+['One line', 'Two line']
+Scenario_Here_are_string_options
+---  Star_A_multiline_string_to_a_string
+One line
+            Two line
+---  Star_A_multiline_string_to_a_List_of_String
+['Three line', 'Four line']
+Scenario_Here_are_table_options
+---  Star_A_table_to_List_of_List_of_String
+[['aa', 'bb'], ['cc', 'dd']]
+Scenario_Table_to_String
+---  Given_A_table_to_String
+| aa  | bb  |
+            | cc  | dd  |
+---  Then_string_should_be_same_as
+| aa  | bb  |
+            | cc  | dd  |
+Scenario_Table_without_all_fields_uses_defaults
+---  Given_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000017F135E67B0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000017F135C6D50>]
+---  Then_table_should_be_same_as
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000017F135C6FD0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000017F135F8D60>]
+Scenario_Transpose_Table
+---  Given_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000017F1351F5C0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000017F13A220F0>]
+---  Then_transposed_table_to_List_of_Object_should_be_the_same
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000017F1360C270>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000017F1360CF30>]
+Scenario_Check_String_Variations
+---  Given_multiline_string
+One line
+            Two line
+---  Then_should_be_equal_to_this_list
+['One line', 'Two line']
+Scenario_Here_are_string_options
+---  Star_A_multiline_string_to_a_string
+One line
+            Two line
+---  Star_A_multiline_string_to_a_List_of_String
+['Three line', 'Four line']
+Scenario_Here_are_table_options
+---  Star_A_table_to_List_of_List_of_String
+[['aa', 'bb'], ['cc', 'dd']]
+Scenario_Table_to_String
+---  Given_A_table_to_String
+| aa  | bb  |
+            | cc  | dd  |
+---  Then_string_should_be_same_as
+| aa  | bb  |
+            | cc  | dd  |
+Scenario_Table_without_all_fields_uses_defaults
+---  Given_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001FD7B7967B0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001FD7B776D50>]
+---  Then_table_should_be_same_as
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001FD7B776FD0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001FD7B7A8D60>]
+Scenario_Transpose_Table
+---  Given_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001FD7B6CF5C0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001FD7BBD2210>]
+---  Then_transposed_table_to_List_of_Object_should_be_the_same
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001FD7B7BC270>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001FD7B7BCF30>]
+Scenario_Check_String_Variations
+---  Given_multiline_string
+One line
+            Two line
+---  Then_should_be_equal_to_this_list
+['One line', 'Two line']
+Scenario_Here_are_string_options
+---  Star_A_multiline_string_to_a_string
+One line
+            Two line
+---  Star_A_multiline_string_to_a_List_of_String
+['Three line', 'Four line']
+Scenario_Here_are_table_options
+---  Star_A_table_to_List_of_List_of_String
+[['aa', 'bb'], ['cc', 'dd']]
+---  Star_A_Table_to_List_Of_List_Of_Object
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C7929550>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C7916850>]
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C7916990>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C795C2B0>]
+---  Star_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C795C3E0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C78FB650>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Values
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000002C1C79296A0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000002C1C7916AD0>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000002C1C7916C10>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000002C1C795C770>]
+---  Star_A_table_to_String
+| aa  | bb  |
+            | cc  | dd  |
+Scenario_Table_to_String
+---  Given_A_table_to_String
+| aa  | bb  |
+            | cc  | dd  |
+---  Then_string_should_be_same_as
+| aa  | bb  |
+            | cc  | dd  |
+Scenario_Table_without_all_fields_uses_defaults
+---  Given_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C7890270>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C78919D0>]
+---  Then_table_should_be_same_as
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C78B2850>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C78B2F50>]
+Scenario_Transpose_Table
+---  Given_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C7922030>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C79224E0>]
+---  Then_transposed_table_to_List_of_Object_should_be_the_same
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C7933850>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002C1C7933230>]
+Scenario_Check_String_Variations
+---  Given_multiline_string
+One line
+            Two line
+---  Then_should_be_equal_to_this_list
+['One line', 'Two line']
+Scenario_Here_are_string_options
+---  Star_A_multiline_string_to_a_string
+One line
+            Two line
+---  Star_A_multiline_string_to_a_List_of_String
+['Three line', 'Four line']
+Scenario_Here_are_table_options
+---  Star_A_table_to_List_of_List_of_String
+[['aa', 'bb'], ['cc', 'dd']]
+---  Star_A_Table_to_List_Of_List_Of_Object
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D7E9160>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D7D6850>]
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D7D6990>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D81C2B0>]
+---  Star_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D81C3E0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D7BB650>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Values
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000001D50D7E92B0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000001D50D7D6AD0>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000001D50D7D6C10>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000001D50D81C770>]
+---  Star_A_table_to_String
+| aa  | bb  |
+            | cc  | dd  |
+Scenario_Table_to_String
+---  Given_A_table_to_String
+| aa  | bb  |
+            | cc  | dd  |
+---  Then_string_should_be_same_as
+| aa  | bb  |
+            | cc  | dd  |
+Scenario_Table_without_all_fields_uses_defaults
+---  Given_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D750270>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D7519D0>]
+---  Then_table_should_be_same_as
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D772850>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D772F50>]
+Scenario_Transpose_Table
+---  Given_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D7E23F0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D7E25D0>]
+---  Then_transposed_table_to_List_of_Object_should_be_the_same
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D7F35B0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000001D50D7F3690>]
+Scenario_Check_String_Variations
+---  Given_multiline_string
+One line
+            Two line
+---  Then_should_be_equal_to_this_list
+['One line', 'Two line']
+Scenario_Here_are_string_options
+---  Star_A_multiline_string_to_a_string
+One line
+            Two line
+---  Star_A_multiline_string_to_a_List_of_String
+['Three line', 'Four line']
+Scenario_Here_are_table_options
+---  Star_A_table_to_List_of_List_of_String
+[['aa', 'bb'], ['cc', 'dd']]
+---  Star_A_Table_to_List_Of_List_Of_Object
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A275160>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A256850>]
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A256990>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A288510>]
+---  Star_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A288640>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A23A8D0>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Values
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000002282A2752B0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000002282A256AD0>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000002282A256C10>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x000002282A2889D0>]
+---  Star_A_table_to_String
+| aa  | bb  |
+                    | cc  | dd  |
+Scenario_Table_to_String
+---  Given_A_table_to_String
+| aa  | bb  |
+                    | cc  | dd  |
+---  Then_string_should_be_same_as
+| aa  | bb  |
+                     | cc  | dd  |
+Scenario_Table_without_all_fields_uses_defaults
+---  Given_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A1D3BD0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A29CD10>]
+---  Then_table_should_be_same_as
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A284F50>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A285350>]
+Scenario_Transpose_Table
+---  Given_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A26AD50>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A26AE40>]
+---  Then_transposed_table_to_List_of_Object_should_be_the_same
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A3002F0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x000002282A300830>]
+Scenario_Check_String_Variations
+---  Given_multiline_string
+One line
+            Two line
+---  Then_should_be_equal_to_this_list
+['One line', 'Two line']
+Scenario_Here_are_string_options
+---  Star_A_multiline_string_to_a_string
+One line
+            Two line
+---  Star_A_multiline_string_to_a_List_of_String
+['Three line', 'Four line']
+Scenario_Here_are_table_options
+---  Star_A_table_to_List_of_List_of_String
+[['aa', 'bb'], ['cc', 'dd']]
+---  Star_A_Table_to_List_Of_List_Of_Object
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E835160>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E816850>]
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E816990>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E848510>]
+---  Star_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E848640>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E7FA8D0>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Values
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000025D9E8352B0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000025D9E816AD0>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000025D9E816C10>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000025D9E8489D0>]
+---  Star_A_table_to_String
+| aa  | bb  |
+| cc  | dd  |
+Scenario_Table_to_String
+---  Given_A_table_to_String
+| aa  | bb  |
+| cc  | dd  |
+---  Then_string_should_be_same_as
+| aa  | bb  |
+| cc  | dd  |
+Scenario_Table_without_all_fields_uses_defaults
+---  Given_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E790270>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E7919D0>]
+---  Then_table_should_be_same_as
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E7B2750>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E7B2E50>]
+Scenario_Transpose_Table
+---  Given_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E82A030>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E82A4E0>]
+---  Then_transposed_table_to_List_of_Object_should_be_the_same
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E83B5B0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000025D9E83B4D0>]
+Scenario_Check_String_Variations
+---  Given_multiline_string
+One line
+Two line
+---  Then_should_be_equal_to_this_list
+['One line', 'Two line']
+Scenario_Here_are_string_options
+---  Star_A_multiline_string_to_a_string
+One line
+Two line
+---  Star_A_multiline_string_to_a_List_of_String
+['Three line', 'Four line']
+Scenario_Here_are_table_options
+---  Star_A_table_to_List_of_List_of_String
+[['aa', 'bb'], ['cc', 'dd']]
+---  Star_A_Table_to_List_Of_List_Of_Object
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D39285160>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D39266850>]
+---  Star_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D39266990>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D39298510>]
+---  Star_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D39298640>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D3924A0F0>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Values
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000026D392852B0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000026D39266AD0>]
+---  Star_A_table_to_List_of_Object_with_Blanks_in_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000026D39266C10>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClassWithBlanks.ExampleClassWithBlanks object at 0x0000026D392989D0>]
+---  Star_A_table_to_String
+| aa  | bb  |
+| cc  | dd  |
+Scenario_Table_to_String
+---  Given_A_table_to_String
+| aa  | bb  |
+| cc  | dd  |
+---  Then_string_should_be_same_as
+| aa  | bb  |
+| cc  | dd  |
+Scenario_Table_without_all_fields_uses_defaults
+---  Given_A_table_to_List_of_Object_with_Defaults
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D391E0270>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D391E19D0>]
+---  Then_table_should_be_same_as
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D39202750>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D39202E50>]
+Scenario_Transpose_Table
+---  Given_A_table_to_List_of_Object
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D3927A030>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D3927A4E0>]
+---  Then_transposed_table_to_List_of_Object_should_be_the_same
+[<tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D3928B4D0>, <tests.gherkinexecutor.Feature_Tables_and_Strings.ExampleClass.ExampleClass object at 0x0000026D3928B690>]
