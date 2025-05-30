@@ -1,5 +1,5 @@
-from tests.gherkinexecutor.ID import ID
-from tests.gherkinexecutor.TemperatureCalculations import TemperatureCalculations
+
+
 class FandCInternal:
 
     @staticmethod
@@ -19,10 +19,10 @@ class FandCInternal:
         )
 
     def __init__(self,
-         f: int
-        , c: int
-        , notes: str
-        ) -> None:
+                f: int
+               , c: int
+               , notes: str
+                ) -> None:
         self.f = f
         self.c = c
         self.notes = notes
@@ -36,5 +36,5 @@ class FandCInternal:
         return  ( _FandCInternal.f == self.f)  and ( _FandCInternal.c == self.c)  and ( _FandCInternal.notes == self.notes)
 
     def __str__(self) -> str:
-        return "{FandCInternal} {{" + \
-         " f = " + str(self.f) + " "  " c = " + str(self.c) + " "  " notes = " + str(self.notes) + " "  "} " + "\n" + "}"
+        return "{FandCInternal} {" + \
+         " f = " + str(self.f) + " "  " c = " + str(self.c) + " "  " notes = " + str(self.notes) + " "  "} " + "\n"

@@ -7,17 +7,9 @@ from tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Feature_Tic_Tac_Toe_Game_glu
 
 class Feature_Tic_Tac_Toe_Game(unittest.TestCase):
 
-    def log(self, value):
-        try:
-            with open("log.txt", "a") as my_log:
-                my_log.write(value + "\n")
-        except IOError:
-            print("*** Cannot write to log", file=sys.stderr)
-    
 
     def test_Scenario_Make_a_move(self):
         feature_Tic_Tac_Toe_Game_glue_object = Feature_Tic_Tac_Toe_Game_glue()
-        self.log("Scenario_Make_a_move")
 
         string_list_list1 = [
             [
@@ -56,7 +48,6 @@ class Feature_Tic_Tac_Toe_Game(unittest.TestCase):
 
     def test_Scenario_Make_a_move_using_single_element(self):
         feature_Tic_Tac_Toe_Game_glue_object = Feature_Tic_Tac_Toe_Game_glue()
-        self.log("Scenario_Make_a_move_using_single_element")
 
         string_list_list4 = [
             [
@@ -93,7 +84,6 @@ class Feature_Tic_Tac_Toe_Game(unittest.TestCase):
 
     def test_Scenario_Make_multiple_moves(self):
         feature_Tic_Tac_Toe_Game_glue_object = Feature_Tic_Tac_Toe_Game_glue()
-        self.log("Scenario_Make_multiple_moves")
 
         string_list_list7 = [
             [
@@ -137,7 +127,6 @@ class Feature_Tic_Tac_Toe_Game(unittest.TestCase):
 
     def test_Scenario_check_the_prints_to_see_how_it_works(self):
         feature_Tic_Tac_Toe_Game_glue_object = Feature_Tic_Tac_Toe_Game_glue()
-        self.log("Scenario_check_the_prints_to_see_how_it_works")
 
         string_list_list10 = [
             [

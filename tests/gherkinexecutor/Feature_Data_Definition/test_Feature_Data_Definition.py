@@ -7,17 +7,9 @@ from tests.gherkinexecutor.Feature_Data_Definition.Feature_Data_Definition_glue 
 
 class Feature_Data_Definition(unittest.TestCase):
 
-    def log(self, value):
-        try:
-            with open("log.txt", "a") as my_log:
-                my_log.write(value + "\n")
-        except IOError:
-            print("*** Cannot write to log", file=sys.stderr)
-    
 
     def test_Scenario_Simple_Comparison(self):
         feature_Data_Definition_glue_object = Feature_Data_Definition_glue()
-        self.log("Scenario_Simple_Comparison")
 
         object_list1 : List[ATest] = [
             ATest.Builder()
@@ -60,7 +52,6 @@ class Feature_Data_Definition(unittest.TestCase):
 
     def test_Scenario_Check_All_Types(self):
         feature_Data_Definition_glue_object = Feature_Data_Definition_glue()
-        self.log("Scenario_Check_All_Types")
 
         object_list6 : List[AllTypes] = [
             AllTypes.Builder()

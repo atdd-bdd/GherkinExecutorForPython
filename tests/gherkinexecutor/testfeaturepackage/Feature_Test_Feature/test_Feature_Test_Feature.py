@@ -7,17 +7,9 @@ from tests.gherkinexecutor.Feature_Test_Feature.Feature_Test_Feature_glue import
 
 class Feature_Test_Feature(unittest.TestCase):
 
-    def log(self, value):
-        try:
-            with open("log.txt", "a") as my_log:
-                my_log.write(value + "\n")
-        except IOError:
-            print("*** Cannot write to log", file=sys.stderr)
-    
 
     def test_Scenario_Include_something(self):
         feature_Test_Feature_glue_object = Feature_Test_Feature_glue()
-        self.log("Scenario_Include_something")
 
         string1 ="""
 This is an include string from the local directory

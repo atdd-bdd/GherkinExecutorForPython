@@ -1,5 +1,3 @@
-from tests.gherkinexecutor.ID import ID
-from tests.gherkinexecutor.TemperatureCalculations import TemperatureCalculations
 from datetime import datetime
 from tests.gherkinexecutor.Feature_Import.Color import Color
 

@@ -18,6 +18,8 @@ To install a Gherkin Executor for your project:
 
 - Copy` starting.feature` into the `tests `directory
 
+- Alter `test_framework = "unittest"`to` test_framework = "pytest" `if using pytest 
+
 - Execute` translate.py` with `starting.feature` as an argument.   
 
 You should see a directory` tests/gherkinexecutor/Feature_Starting` 
@@ -31,5 +33,3 @@ In that directory, there are four files.
 - Run the tests in `test_Feature_Starting.py`
 
 - They should all fail.   Create a temperature convertor and alter the glue code to call it. 
-
- 

@@ -7,17 +7,9 @@ from tests.gherkinexecutor.Feature_Tables_and_Strings.Feature_Tables_and_Strings
 
 class Feature_Tables_and_Strings(unittest.TestCase):
 
-    def log(self, value):
-        try:
-            with open("log.txt", "a") as my_log:
-                my_log.write(value + "\n")
-        except IOError:
-            print("*** Cannot write to log", file=sys.stderr)
-    
 
     def test_Scenario_Here_are_string_options(self):
         feature_Tables_and_Strings_glue_object = Feature_Tables_and_Strings_glue()
-        self.log("Scenario_Here_are_string_options")
 
         string1 ="""
 One line
@@ -33,7 +25,6 @@ Two line
 
     def test_Scenario_Check_String_Variations(self):
         feature_Tables_and_Strings_glue_object = Feature_Tables_and_Strings_glue()
-        self.log("Scenario_Check_String_Variations")
 
         string3 ="""
 One line
@@ -49,7 +40,6 @@ Two line
 
     def test_Scenario_Here_are_table_options(self):
         feature_Tables_and_Strings_glue_object = Feature_Tables_and_Strings_glue()
-        self.log("Scenario_Here_are_table_options")
 
         string_list_list5 = [
             [
@@ -143,7 +133,6 @@ Two line
 
     def test_Scenario_Table_to_String(self):
         feature_Tables_and_Strings_glue_object = Feature_Tables_and_Strings_glue()
-        self.log("Scenario_Table_to_String")
 
         table13 = """
 | aa  | bb  |
@@ -159,7 +148,6 @@ Two line
 
     def test_Scenario_Table_without_all_fields_uses_defaults(self):
         feature_Tables_and_Strings_glue_object = Feature_Tables_and_Strings_glue()
-        self.log("Scenario_Table_without_all_fields_uses_defaults")
 
         object_list15 : List[ExampleClass] = [
             ExampleClass.Builder()
@@ -185,7 +173,6 @@ Two line
 
     def test_Scenario_Transpose_Table(self):
         feature_Tables_and_Strings_glue_object = Feature_Tables_and_Strings_glue()
-        self.log("Scenario_Transpose_Table")
 
         object_list17 : List[ExampleClass] = [
             ExampleClass.Builder()

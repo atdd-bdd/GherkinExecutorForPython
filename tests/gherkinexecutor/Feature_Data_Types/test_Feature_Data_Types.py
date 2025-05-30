@@ -7,17 +7,9 @@ from tests.gherkinexecutor.Feature_Data_Types.Feature_Data_Types_glue import Fea
 
 class Feature_Data_Types(unittest.TestCase):
 
-    def log(self, value):
-        try:
-            with open("log.txt", "a") as my_log:
-                my_log.write(value + "\n")
-        except IOError:
-            print("*** Cannot write to log", file=sys.stderr)
-    
 
     def test_Scenario_Use_the_data_types(self):
         feature_Data_Types_glue_object = Feature_Data_Types_glue()
-        self.log("Scenario_Use_the_data_types")
 
         object_list1 : List[SomeTypes] = [
             SomeTypes.Builder()

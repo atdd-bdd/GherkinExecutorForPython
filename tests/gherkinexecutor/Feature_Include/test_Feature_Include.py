@@ -7,17 +7,9 @@ from tests.gherkinexecutor.Feature_Include.Feature_Include_glue import Feature_I
 
 class Feature_Include(unittest.TestCase):
 
-    def log(self, value):
-        try:
-            with open("log.txt", "a") as my_log:
-                my_log.write(value + "\n")
-        except IOError:
-            print("*** Cannot write to log", file=sys.stderr)
-    
 
     def test_Scenario_An_include(self):
         feature_Include_glue_object = Feature_Include_glue()
-        self.log("Scenario_An_include")
 
         string1 ="""
 This is an include string from the main directory
@@ -31,7 +23,6 @@ This is an include string from the main directory
 
     def test_Scenario_An_include_from_base_directory(self):
         feature_Include_glue_object = Feature_Include_glue()
-        self.log("Scenario_An_include_from_base_directory")
 
         string3 ="""
 This is an include string from the main directory
@@ -45,7 +36,6 @@ This is an include string from the main directory
 
     def test_Scenario_An_include_of_CSV_file(self):
         feature_Include_glue_object = Feature_Include_glue()
-        self.log("Scenario_An_include_of_CSV_file")
 
         object_list5 : List[CSVContents] = [
             CSVContents.Builder()

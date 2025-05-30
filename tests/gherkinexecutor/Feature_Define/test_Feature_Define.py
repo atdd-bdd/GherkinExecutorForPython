@@ -7,17 +7,9 @@ from tests.gherkinexecutor.Feature_Define.Feature_Define_glue import Feature_Def
 
 class Feature_Define(unittest.TestCase):
 
-    def log(self, value):
-        try:
-            with open("log.txt", "a") as my_log:
-                my_log.write(value + "\n")
-        except IOError:
-            print("*** Cannot write to log", file=sys.stderr)
-    
 
     def test_Scenario_Simple_Replacement(self):
         feature_Define_glue_object = Feature_Define_glue()
-        self.log("Scenario_Simple_Replacement")
 
         object_list1 : List[IDValue] = [
             IDValue.Builder()
@@ -45,7 +37,6 @@ class Feature_Define(unittest.TestCase):
 
     def test_Scenario_Try_out_replacements_with_a_calculation(self):
         feature_Define_glue_object = Feature_Define_glue()
-        self.log("Scenario_Try_out_replacements_with_a_calculation")
 
         object_list3 : List[IDValue] = [
             IDValue.Builder()

@@ -7,16 +7,8 @@ from tests.gherkinexecutor.Feature_Background.Feature_Background_glue import Fea
 
 class Feature_Background(unittest.TestCase):
 
-    def log(self, value):
-        try:
-            with open("log.txt", "a") as my_log:
-                my_log.write(value + "\n")
-        except IOError:
-            print("*** Cannot write to log", file=sys.stderr)
-    
 
     def background(self, feature_Background_glue_object):
-        self.log("background")
 
         string_list_list1 = [
             [
@@ -26,7 +18,6 @@ class Feature_Background(unittest.TestCase):
         feature_Background_glue_object.Given_Background_function_sets_a_value(string_list_list1)
 
     def cleanup(self, feature_Background_glue_object):
-        self.log("cleanup")
 
         string_list_list2 = [
             [
@@ -37,7 +28,6 @@ class Feature_Background(unittest.TestCase):
 
     def test_Scenario_Should_have_Background_and_Cleanup(self):
         feature_Background_glue_object = Feature_Background_glue()
-        self.log("Scenario_Should_have_Background_and_Cleanup")
         self.background(feature_Background_glue_object)
 
         feature_Background_glue_object.Given_a_regular_function()
@@ -59,7 +49,6 @@ class Feature_Background(unittest.TestCase):
 
     def test_Scenario_Should_also_have_Background_and_Cleanup(self):
         feature_Background_glue_object = Feature_Background_glue()
-        self.log("Scenario_Should_also_have_Background_and_Cleanup")
         self.background(feature_Background_glue_object)
 
         feature_Background_glue_object.Given_a_regular_function()

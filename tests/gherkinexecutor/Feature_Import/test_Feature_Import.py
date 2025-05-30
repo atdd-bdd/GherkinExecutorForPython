@@ -7,17 +7,9 @@ from tests.gherkinexecutor.Feature_Import.Feature_Import_glue import Feature_Imp
 
 class Feature_Import(unittest.TestCase):
 
-    def log(self, value):
-        try:
-            with open("log.txt", "a") as my_log:
-                my_log.write(value + "\n")
-        except IOError:
-            print("*** Cannot write to log", file=sys.stderr)
-    
 
     def test_Scenario_Use_an_import(self):
         feature_Import_glue_object = Feature_Import_glue()
-        self.log("Scenario_Use_an_import")
 
         object_list1 : List[ImportData] = [
             ImportData.Builder()
@@ -33,7 +25,6 @@ class Feature_Import(unittest.TestCase):
 
     def test_Scenario_Should_fail(self):
         feature_Import_glue_object = Feature_Import_glue()
-        self.log("Scenario_Should_fail")
 
         object_list2 : List[ImportData] = [
             ImportData.Builder()
