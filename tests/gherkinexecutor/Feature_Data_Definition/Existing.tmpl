@@ -10,7 +10,7 @@ class Existing:
         + "float " 
         + "} "
 
-    def to_TestIn(self) :
+    def to_TestIn(self):
         from tests.gherkinexecutor.Feature_Data_Definition.TestIn import TestIn
         return TestIn(
          str(self.aValue)
@@ -34,6 +34,7 @@ class Existing:
             return False
         _Existing = other
         return  ( _Existing.aValue == self.aValue)  and ( _Existing.bValue == self.bValue)  and ( _Existing.cValue == self.cValue)
+
 
     def __str__(self) -> str:
         return "{Existing} {" + \

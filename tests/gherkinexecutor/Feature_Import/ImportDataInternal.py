@@ -11,7 +11,7 @@ class ImportDataInternal:
         + "Color " 
         + "} "
 
-    def to_ImportData(self) :
+    def to_ImportData(self):
         from tests.gherkinexecutor.Feature_Import.ImportData import ImportData
         return ImportData(
          str(self.myDate)
@@ -32,6 +32,7 @@ class ImportDataInternal:
             return False
         _ImportDataInternal = other
         return  ( _ImportDataInternal.myDate == self.myDate)  and ( _ImportDataInternal.color == self.color)
+
 
     def __str__(self) -> str:
         return "{ImportDataInternal} {" + \

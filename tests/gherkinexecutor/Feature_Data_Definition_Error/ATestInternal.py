@@ -10,7 +10,7 @@ class ATestInternal:
         + "float " 
         + "} "
 
-    def to_ATest(self) :
+    def to_ATest(self):
         from tests.gherkinexecutor.Feature_Data_Definition_Error.ATest import ATest
         return ATest(
          str(self.anInt)
@@ -34,6 +34,7 @@ class ATestInternal:
             return False
         _ATestInternal = other
         return  ( _ATestInternal.anInt == self.anInt)  and ( _ATestInternal.aString == self.aString)  and ( _ATestInternal.aDouble == self.aDouble)
+
 
     def __str__(self) -> str:
         return "{ATestInternal} {" + \

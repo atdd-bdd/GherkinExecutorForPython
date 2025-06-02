@@ -696,3 +696,33 @@ Scenario_check_the_prints_to_see_how_it_works
 | 0  | x  | 0  |
 | x  | 0  | x  |
 | 0  | x  | 0  |
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_move_is
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001C6FA84DA90>]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_one_move_is
+[['1,2,X']]
+---  Then_board_is_now
+|   | X  |   |
+|   |    |   |
+|   |    |   |
+---  Given_board_is
+[['', '', ''], ['', '', ''], ['', '', '']]
+---  When_moves_are
+[<tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001C6FA836990>, <tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move.Move object at 0x000001C6FA87C640>]
+---  Then_board_is_now
+|   | X  |    |
+|   |    | O  |
+|   |    |    |
+---  Given_board_is
+[['0', 'x', '0'], ['x', '0', 'x'], ['0', 'x', '0']]
+---  Then_board_is_now
+| 0  | x  | 0  |
+| x  | 0  | x  |
+| 0  | x  | 0  |

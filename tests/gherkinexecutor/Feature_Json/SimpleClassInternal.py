@@ -9,7 +9,7 @@ class SimpleClassInternal:
         + "str " 
         + "} "
 
-    def to_SimpleClass(self) :
+    def to_SimpleClass(self):
         from tests.gherkinexecutor.Feature_Json.SimpleClass import SimpleClass
         return SimpleClass(
          str(self.anInt)
@@ -30,6 +30,7 @@ class SimpleClassInternal:
             return False
         _SimpleClassInternal = other
         return  ( _SimpleClassInternal.anInt == self.anInt)  and ( _SimpleClassInternal.aString == self.aString)
+
 
     def __str__(self) -> str:
         return "{SimpleClassInternal} {" + \

@@ -958,3 +958,43 @@ Scenario_Convert_to_Json_Array
 [ {"anInt": "1","aString": "B"}
 , {"anInt": "2","aString": "C"}
 ]
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000029171889400>]
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000029171876AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000291718C02B0>]
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000291717F2140>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x00000291717F18C0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000029171813450>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]
+---  Given_Json_is
+{anInt:  "1"   ,   aString:"B"  }
+---  Then_the_converted_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000024E4BD0D550>]
+---  Given_Json_for_table_is
+[    {anInt:  "1"   ,   aString:"B"  },
+{anInt:  "2"   ,   aString:"C"  }
+]
+---  Then_the_converted_table_should_be
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000024E4BCF6AD0>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000024E4C1402B0>]
+---  Given_one_object_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000024E4BC718C0>]
+---  Then_Json_should_be
+{"anInt": "1","aString": "B"}
+---  Given_a_table_is
+[<tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000024E4BC70270>, <tests.gherkinexecutor.Feature_Json.SimpleClass.SimpleClass object at 0x0000024E4BC92350>]
+---  Then_Json_for_table_should_be
+[ {"anInt": "1","aString": "B"}
+, {"anInt": "2","aString": "C"}
+]

@@ -10,7 +10,7 @@ class MoveInternal:
         + "str " 
         + "} "
 
-    def to_Move(self) :
+    def to_Move(self):
         from tests.gherkinexecutor.Feature_Tic_Tac_Toe_Game.Move import Move
         return Move(
          str(self.row)
@@ -34,6 +34,7 @@ class MoveInternal:
             return False
         _MoveInternal = other
         return  ( _MoveInternal.row == self.row)  and ( _MoveInternal.column == self.column)  and ( _MoveInternal.mark == self.mark)
+
 
     def __str__(self) -> str:
         return "{MoveInternal} {" + \

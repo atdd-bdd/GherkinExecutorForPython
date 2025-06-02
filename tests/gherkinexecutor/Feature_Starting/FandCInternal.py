@@ -10,7 +10,7 @@ class FandCInternal:
         + "str " 
         + "} "
 
-    def to_FandC(self) :
+    def to_FandC(self):
         from tests.gherkinexecutor.Feature_Starting.FandC import FandC
         return FandC(
          str(self.f)
@@ -34,6 +34,7 @@ class FandCInternal:
             return False
         _FandCInternal = other
         return  ( _FandCInternal.f == self.f)  and ( _FandCInternal.c == self.c)  and ( _FandCInternal.notes == self.notes)
+
 
     def __str__(self) -> str:
         return "{FandCInternal} {" + \

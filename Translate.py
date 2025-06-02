@@ -17,7 +17,7 @@ class Translate:
         self.lines_to_add_for_data_and_glue = []
         self.lines_to_add_to_end_of_glue = []
         self.define_names = {}
-        self.setp_count = 0  # use to label duplicate scenarios
+        self.step_count = 0  # use to label duplicate scenarios
         self.glue_class = ""  # glue class name
         self.glue_object = ""  # glue object name
 
@@ -103,7 +103,7 @@ class Translate:
         directory = self.feature_directory.replace(search_for, "")
         directory = directory.replace(alternate_search_for, "")
         self.feature_directory = directory
-        self.featurre_package_path = self.feature_directory.replace("\\", ".").replace("/", ".")
+        self.feature_package_path = self.feature_directory.replace("\\", ".").replace("/", ".")
 
     def find_feature_directory(self, name):
         directory = ""
@@ -113,7 +113,7 @@ class Translate:
         if index >= 0:
             directory = name[:index + 1]
         self.feature_directory = directory
-        self.featurre_package_path = self.feature_directory.replace("\\", ".").replace("/", ".")
+        self.feature_package_path = self.feature_directory.replace("\\", ".").replace("/", ".")
 
     def act_on_line(self, line, pass_num):
         words, comment = self.split_line(line, pass_num)
@@ -154,10 +154,10 @@ class Translate:
         return words, comment
 
     @staticmethod
-    def filter_word(input):
-        if input is None:
+    def filter_word(value):
+        if value is None:
             return ""
-        return re.sub(r"[^0-9a-zA-Z_*]", "", input)
+        return re.sub(r"[^0-9a-zA-Z_*]", "", value)
 
     @staticmethod
     def word_without_colon(word):
@@ -274,11 +274,11 @@ class Translate:
         # no imports needed
         self.check_for_tag_line()
         if test_framework == "unittest":
-            self.test_print(f"class {full_name}(unittest.TestCase):")
+            self.test_print(f"class Test{full_name}(unittest.TestCase): ")
         elif test_framework == "pytest":
-            self.test_print(f"class {full_name}:")
+            self.test_print(f"class Test{full_name}: ")
         else:
-            self.test_print(f"class {full_name}:")
+            self.test_print(f"class Test{full_name}: ")
 
         self.test_print(self.log_it())
 
@@ -292,7 +292,7 @@ class Translate:
         self.feature_name = full_name
         self.package_path = f"{Configuration.add_to_package_name}{Configuration.package_name}.{self.feature_package_path}{self.feature_name}"
         self.print_flow(f"Package is {self.package_path}")
-        feature_test_name = "test_" + full_name
+        feature_test_name = full_name
         test_pathname = f"{Configuration.test_sub_directory}{self.feature_directory}{self.feature_name}/{feature_test_name}.py"
         self.print_flow(f"Writing {test_pathname}")
         template_filename = f"{Configuration.test_sub_directory}{self.feature_directory}{self.feature_name}/{self.feature_name}_glue.tmpl"
@@ -304,7 +304,7 @@ class Translate:
             self.template_construct.glue_template_file = open(template_filename, 'w')
         except IOError as e:
             self.error("IO Exception in setting up the files")
-            self.error(f"Writing {test_pathname}")
+            self.error(f"Writing {test_pathname} + e")
         self.glue_class = f"{full_name}_glue"
         self.glue_object = f"{self.make_name(full_name)}_glue_object"
         self.write_input_feature(f"{Configuration.test_sub_directory}{self.feature_directory}{self.feature_name}/")
@@ -343,10 +343,10 @@ class Translate:
         return f"set{temp}"
 
     @staticmethod
-    def make_name(input):
-        if not input:
+    def make_name(value):
+        if not value:
             return "NAME_IS_EMPTY"
-        temp = input.replace(" ", "_")
+        temp = value.replace(" ", "_")
         temp = Translate.filter_word(temp)
         return temp[0].lower() + temp[1:]
 
@@ -369,7 +369,7 @@ class Translate:
 
         self.check_for_tag_line()
         self.test_print("")
-        self.test_print(f"    def test_{full_name_to_use}(self):")
+        self.test_print(f"    def test_{full_name_to_use}(self): ")
         self.test_print(f"        {self.glue_object} = {self.glue_class}()")
 
         if Configuration.log_it:
@@ -390,7 +390,7 @@ class Translate:
         if self.first_scenario:
             self.first_scenario = False
         self.test_print("")
-        self.test_print(f"    def {full_name_to_use}(self, {self.glue_object}):")
+        self.test_print(f"    def {full_name_to_use}(self, {self.glue_object}): ")
         if Configuration.log_it:
             self.test_print(f"        self.log(\"{full_name_to_use}\")")
 
@@ -407,7 +407,7 @@ class Translate:
         if self.first_scenario:
             self.first_scenario = False
         self.test_print("")
-        self.test_print(f"    def {full_name_to_use}(self, {self.glue_object}):")
+        self.test_print(f"    def {full_name_to_use}(self, {self.glue_object}): ")
         if Configuration.log_it:
             self.test_print(f"        self.log(\"{full_name_to_use}\")")
 
@@ -554,7 +554,6 @@ class Translate:
         except Exception as e:
             # print(f"Unable to read {e} {filepath}")
             return
-        arguments = [""]
         arguments = raw
         Configuration.filter_expression = arguments[0]
         print(f"Filter is {arguments[0]}")
@@ -568,7 +567,6 @@ class Translate:
         except Exception as e:
             # print(f"Unable to read {e} {filepath}")
             return
-        arguments = [""]
         arguments = raw
         Translate.process_arguments(arguments)
 
@@ -585,11 +583,11 @@ class Translate:
         Configuration.feature_files.extend(lines)
 
     @staticmethod
-    def collect_feature_files(dir, feature_files):
+    def collect_feature_files(directory, feature_files):
         remove = Configuration.feature_sub_directory.replace("/", "\\")
-        if os.path.isdir(dir):
-            for file in os.listdir(dir):
-                file_path = os.path.join(dir, file)
+        if os.path.isdir(directory):
+            for file in os.listdir(directory):
+                file_path = os.path.join(directory, file)
                 if os.path.isdir(file_path):
                     Translate.collect_feature_files(file_path, feature_files)
                 elif file.endswith(".feature"):
@@ -853,7 +851,7 @@ class StepConstruct:
         data_type = "List[List[str]]"
         data_type_initializer = "["
 
-        self.outer.test_print(f"        string_list_list{s} :  {data_type}  = {data_type_initializer}")
+        self.outer.test_print(f"        string_list_list{s}:  {data_type}  = {data_type_initializer}")
         comma = ""
         for line in table:
             self.convert_bar_line_to_list(line, comma)
@@ -880,7 +878,7 @@ class StepConstruct:
 
     def create_the_table(self, comment, table, full_name):
         option = "ListOfList"
-        class_name = None
+
         if comment and comment[0]:
             option = comment[0]
         if option == "ListOfList":
@@ -950,7 +948,7 @@ class StepConstruct:
         s = str(self.step_number_in_scenario)
         data_type = f"List[{class_name}]"
         data_type_initializer = "["
-        self.outer.test_print(f"        object_list{s} : {data_type} = {data_type_initializer}")
+        self.outer.test_print(f"        object_list{s}: {data_type} = {data_type_initializer}")
         in_header_line = True
         data_list = self.convert_to_list_list(table, transpose)
         headers = []
@@ -1104,7 +1102,7 @@ class TemplateConstruct:
         self.template_print("from typing import List")
         self.template_print("import sys")
         self.template_print("")
-        self.template_print(f"class {self.outer.glue_class} :")
+        self.template_print(f"class {self.outer.glue_class}:")
         self.template_print(f'    DNCString = "{Configuration.do_not_compare}"')
         self.template_print(self.outer.log_it())
         self.template_print("")
@@ -1152,7 +1150,7 @@ class DataConstruct:
 
         if class_name in self.outer.data_names:
             self.outer.error(f"Data name is duplicated {class_name}")
-            return;
+            return
 
         self.outer.trace(f"Creating class for {class_name}")
         self.outer.data_names[class_name] = class_name
@@ -1172,7 +1170,7 @@ class DataConstruct:
         for variable in variables:
             self.outer.class_data_names.append(f"{class_name}#{variable.name}")
             # self.data_print_ln(
-            #     f"     {self.outer.make_name(variable.name)} : {variable.data_type} = \"{variable.default_val}\"")
+            #     f"     {self.outer.make_name(variable.name)}: {variable.data_type} = \"{variable.default_val}\"")
 
         self.create_constructor(variables, class_name)
         self.create_equals_method(variables, class_name)
@@ -1272,12 +1270,6 @@ class DataConstruct:
         except IOError:
             self.outer.error("IO ERROR")
 
-    def data_print(self, line):
-        try:
-            self.data_definition_file.write(line)
-        except IOError:
-            self.outer.error("IO ERROR")
-
     def create_constructor(self, variables, class_name):
         self.data_print_ln(f"    def __init__(self,")
         comma = ""
@@ -1303,9 +1295,9 @@ class DataConstruct:
     def create_to_string_method(self, variables, class_name):
         code = """
     def __str__(self) -> str:
-        return "{CLASSNAME} {" + \\
+        return "{CLASS_NAME} {" + \\
         """
-        code = code.replace("CLASSNAME", class_name)
+        code = code.replace("CLASS_NAME", class_name)
         for variable in variables:
             code += f' " {variable.name} = " + str(self.{variable.name}) + " " '
         code += ' "} "'
@@ -1396,9 +1388,9 @@ class DataConstruct:
         self.data_print_ln("        result1 = True")
 
         for variable in variables:
-            self.data_print_ln("        if not (self." + variable.name + " == " + Translate.quote_it( \
+            self.data_print_ln("        if not (self." + variable.name + " == " + Translate.quote_it(
                 Configuration.do_not_compare) + " or " + \
-                               variable_name + "." + variable.name + " == " + Translate.quote_it( \
+                               variable_name + "." + variable.name + " == " + Translate.quote_it(
                 Configuration.do_not_compare) + "):")
             self.data_print_ln(
                 "            if not " + variable_name + "." + variable.name + " == self." + variable.name + ":")
@@ -1497,13 +1489,15 @@ class DataConstruct:
         self.data_print_ln("            return False")
         variable_name = f"_{class_name}"
         self.data_print_ln(f"        {variable_name} = other")
-        self.data_print("        return ")
+        result = ""
+        result = "        return "
         and_str = ""
+
         for variable in variables:
             comparison = "==" if self.primitive_data_type(variable) else "=="
-            self.data_print(
-                f" {and_str}( {variable_name}.{variable.name} {comparison} self.{variable.name})")
+            result += f" {and_str}( {variable_name}.{variable.name} {comparison} self.{variable.name})"
             and_str = " and "
+        self.data_print_ln(result)
 
     def primitive_data_type(self, variable):
         return variable.data_type in ["bool", "int", "float", "str", "complex"]
@@ -1519,7 +1513,7 @@ class DataConstruct:
         self.data_print_ln(f"        + {self.outer.quote_it('} ')}")
 
     def create_conversion_to_string_object(self, other_class_name, variables):
-        self.data_print_ln(f"    def to_{other_class_name}(self) :")
+        self.data_print_ln(f"    def to_{other_class_name}(self):")
         self.data_print_ln("        " + self.outer.make_import_for_data_class(other_class_name))
         self.data_print_ln(f"        return {other_class_name}(")
         comma = ""

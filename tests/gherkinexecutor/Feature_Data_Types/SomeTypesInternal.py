@@ -11,7 +11,7 @@ class SomeTypesInternal:
         + "str " 
         + "} "
 
-    def to_SomeTypes(self) :
+    def to_SomeTypes(self):
         from tests.gherkinexecutor.Feature_Data_Types.SomeTypes import SomeTypes
         return SomeTypes(
          str(self.anInt)
@@ -38,6 +38,7 @@ class SomeTypesInternal:
             return False
         _SomeTypesInternal = other
         return  ( _SomeTypesInternal.anInt == self.anInt)  and ( _SomeTypesInternal.aDouble == self.aDouble)  and ( _SomeTypesInternal.aChar == self.aChar)  and ( _SomeTypesInternal.anchar == self.anchar)
+
 
     def __str__(self) -> str:
         return "{SomeTypesInternal} {" + \

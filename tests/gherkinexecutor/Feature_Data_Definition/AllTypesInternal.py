@@ -12,7 +12,7 @@ class AllTypesInternal:
         + "complex " 
         + "} "
 
-    def to_AllTypes(self) :
+    def to_AllTypes(self):
         from tests.gherkinexecutor.Feature_Data_Definition.AllTypes import AllTypes
         return AllTypes(
          str(self.anInt)
@@ -42,6 +42,7 @@ class AllTypesInternal:
             return False
         _AllTypesInternal = other
         return  ( _AllTypesInternal.anInt == self.anInt)  and ( _AllTypesInternal.aFloat == self.aFloat)  and ( _AllTypesInternal.aBool == self.aBool)  and ( _AllTypesInternal.aString == self.aString)  and ( _AllTypesInternal.aComplex == self.aComplex)
+
 
     def __str__(self) -> str:
         return "{AllTypesInternal} {" + \
