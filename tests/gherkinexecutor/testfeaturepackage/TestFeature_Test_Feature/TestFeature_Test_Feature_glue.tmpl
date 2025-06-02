@@ -1,0 +1,23 @@
+from tests.gherkinexecutor.TestFeature_Test_Feature import *
+from typing import List
+import sys
+
+class Feature_Test_Feature_glue :
+    DNCString = "?DNC?"
+
+
+    def Given_local_include(self, value: str) -> None:
+        print("---  " + "Given_local_include")
+        print(value)
+        raise NotImplementedError("Must implement")
+
+    def Then_string_equals(self, value: str) -> None:
+        print("---  " + "Then_string_equals")
+        print(value)
+        raise NotImplementedError("Must implement")
+
+    def Given_global_include(self, value: str) -> None:
+        print("---  " + "Given_global_include")
+        print(value)
+        raise NotImplementedError("Must implement")
+
