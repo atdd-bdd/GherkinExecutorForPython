@@ -4,7 +4,7 @@ This application is in development mode.   It is being converted from java to py
 
 The full documentation is at [GitHub - atdd-bdd/GherkinExecutorForJava: Gherkin Executor for Java translates Gherkin files into unit tests](https://github.com/atdd-bdd/GherkinExecutorForJava)
 
-The examples.feature file shows how it works.    
+The examples.featurex file shows how it works.
 
 
 
@@ -16,11 +16,11 @@ To install a Gherkin Executor for your project:
 
 - Create a `tests `directory
 
-- Copy` starting.feature` into the `tests `directory
+- Copy` starting.featurex` into the `tests `directory
 
 - Alter `test_framework = "unittest"`to` test_framework = "pytest" `if using pytest 
 
-- Execute` translate.py` with `starting.feature` as an argument.   
+- Execute` translate.py` with `starting.featurex` as an argument.
 
 You should see a directory` tests/gherkinexecutor/Feature_Starting` 
 

@@ -590,7 +590,7 @@ class Translate:
                 file_path = os.path.join(directory, file)
                 if os.path.isdir(file_path):
                     Translate.collect_feature_files(file_path, feature_files)
-                elif file.endswith(".feature"):
+                elif file.endswith(".featurex"):
                     path = file_path.replace(remove, "")
                     feature_files.append(path)
 

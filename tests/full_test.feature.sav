@@ -1,17 +1,17 @@
 Feature: Full Test
 
 
-Include "data_definition.feature" 
-Include "datatype.feature"
-Include "data_definition_error.feature"
-Include "define.feature"
-Include "examples.feature" 
-Include "import.feature" 
-Include "include.feature"
-Include "simple_test.feature" 
-Include "tables_and_strings.feature"
-Include "tic_tac_toe.feature
-Include "json.feature"
+Include "data_definition.featurex"
+Include "datatype.featurex"
+Include "data_definition_error.featurex"
+Include "define.featurex"
+Include "examples.featurex"
+Include "import.featurex"
+Include "include.featurex"
+Include "simple_test.featurex"
+Include "tables_and_strings.featurex"
+Include "tic_tac_toe.featurex
+Include "json.featurex"
 
 
 
