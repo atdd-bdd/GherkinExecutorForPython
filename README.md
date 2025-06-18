@@ -1,12 +1,14 @@
 # Gherkin Executor for Python
 
-This application is in development mode.   It is being converted from java to python.    
+The full documentation is at [GitHub - atdd-bdd/GherkinExecutorBase: This is the base for Gherkin Executor containing Documentation and Examples](https://github.com/atdd-bdd/GherkinExecutorBase)
 
-The full documentation is at [GitHub - atdd-bdd/GherkinExecutorForJava: Gherkin Executor for Java translates Gherkin files into unit tests](https://github.com/atdd-bdd/GherkinExecutorForJava)
+You can see an example of a featurex file at:
 
-The examples.featurex file shows how it works.
+[GherkinExecutorForPython/tests/examples.feature at main · atdd-bdd/GherkinExecutorForPython · GitHub](https://github.com/atdd-bdd/GherkinExecutorForPython/blob/main/tests/examples.feature)
 
+The generated code, as well as the altered glue file are in this directory:: 
 
+[GherkinExecutorForPython/tests/gherkinexecutor/Feature_Examples at main · atdd-bdd/GherkinExecutorForPython · GitHub](https://github.com/atdd-bdd/GherkinExecutorForPython/tree/main/tests/gherkinexecutor/Feature_Examples)
 
 To install a Gherkin Executor for your project:
 

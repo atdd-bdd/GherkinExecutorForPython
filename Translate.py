@@ -1448,7 +1448,8 @@ class DataConstruct:
             "String": "str",
             "Boolean": "bool",
             "char": "str",
-            "Char": "str"
+            "Char": "str",
+            "Text": "str"
         }.get(s, s)
 
     def check_headers(self, headers):
