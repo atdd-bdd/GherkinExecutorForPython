@@ -4,7 +4,7 @@ The full documentation is at [GitHub - atdd-bdd/GherkinExecutorBase: This is the
 
 You can see an example of a featurex file at:
 
-[GherkinExecutorForPython/tests/examples.feature at main · atdd-bdd/GherkinExecutorForPython · GitHub](https://github.com/atdd-bdd/GherkinExecutorForPython/blob/main/tests/examples.feature)
+[GherkinExecutorForPython/tests/examples.feature at main · atdd-bdd/GherkinExecutorForPython · GitHub](https://github.com/atdd-bdd/GherkinExecutorForPython/blob/main/tests/examples.featurex)
 
 The generated code, as well as the altered glue file are in this directory:: 
 
