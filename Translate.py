@@ -206,7 +206,8 @@ class Translate:
                 self.act_on_cleanup(full_name)
                 self.in_cleanup = True
         elif keyword in ["But", "Given", "When", "Then", "And", "Star", "Arrange", "Act", "Assert", "Rule",
-                         "Calculation"]:
+                         "Calculation", "Trigger", "Verify", "Assemble", "Activate",
+                         "Preconditions", "MainCourse", "Exception","Postconditions",]:
             if pass_num == 3 and not self.skip_steps:
                 self.step_construct.act_on_step(full_name, comment)
         elif keyword == "Data" and pass_num == 1:
